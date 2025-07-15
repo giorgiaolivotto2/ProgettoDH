@@ -1,0 +1,15 @@
+.main-catalog-button {
+	display: inline-block;
+	padding: 15px 30px;
+	background-color: #333;
+	color: white;
+	text-decoration: none;
+	font-size: 1.2rem;
+	font-weight: bold;
+	border: 2px solid #333;
+	cursor: pointer;
+	onmouseover="this.style.backgroundColor='#555';
+	this.style.borderColor='#555';
+	onmouseout="this.style.backgroundColor='#333';
+	this.style.borderColor='#333';
+}

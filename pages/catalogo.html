@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>D'Annunzio e il Dèco - Catalogo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">D'Annunzio e il Dèco</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="progetto.html">Il progetto</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Il periodo
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Gabriele D'Annunzio</a></li>
+                            <li><a class="dropdown-item" href="#">La Storia</a></li>
+                            <li><a class="dropdown-item" href="#">Le arti decorative</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Risorse</a>
+                    </li>
+                </ul>
+
+                <form class="d-flex align-items-center gap-2" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Gabriele D'Annunzio"
+                        aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">Ricerca</button>
+
+                    <!-- Language Dropdown -->
+                    <div class="dropdown">
+                        <button class="btn btn-outline-secondary dropdown-toggle" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Lingua
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="?lang=it">Italiano</a></li>
+                            <li><a class="dropdown-item" href="?lang=en">English</a></li>
+                            <li><a class="dropdown-item" href="?lang=fr">Français</a></li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header sezione -->
+    <div class="bg-dark text-white py-4 text-center">
+        <h1 class="mb-0">Catalogo</h1>
+    </div>
+
+    <main class="container-fluid my-5">
+        <div class="row">
+            <!-- Sidebar filtri -->
+            <aside class="col-lg-3 mb-4 px-4">
+                <h5>Filtra per</h5>
+
+                <!-- Categoria -->
+                <div class="mb-3">
+                    <label class="form-label">Tipologia documento</label>
+                    <select class="form-select">
+                        <option>Tutte</option>
+                        <option>Dipinti</option>
+                        <option>Sculture</option>
+                        <option>Oggetti d'arte</option>
+                        <option>Archivio</option>
+                    </select>
+                </div>
+
+                <!-- Periodo -->
+                <div class="mb-3">
+                    <label class="form-label">Materiale/Tecnica</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="filtro-quadri">
+                        <label class="form-check-label" for="filtro-1920s">Quadri</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="filtro-vetri">
+                        <label class="form-check-label" for="filtro-1930s">Vetro di murano</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="filtro-ferri">
+                        <label class="form-check-label" for="filtro-1930s">Ferro battuto</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="filtro-smalti">
+                        <label class="form-check-label" for="filtro-1930s">Smalti</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="filtro-ceramiche">
+                        <label class="form-check-label" for="filtro-1930s">Ceramiche</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="filtro-textiles">
+                        <label class="form-check-label" for="filtro-1930s">Tessili</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="filtro-design">
+                        <label class="form-check-label" for="filtro-1930s">Disegni e progetti</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="filtro-photos">
+                        <label class="form-check-label" for="filtro-1930s">Fotografie</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="filtro-text">
+                        <label class="form-check-label" for="filtro-1930s">Testi</label>
+                    </div>
+                </div>
+
+                <!-- Autore -->
+                <div class="mb-3">
+                    <label class="form-label">Artista/Autore</label>
+                    <input type="text" class="form-control" placeholder="Cerca autore...">
+                </div>
+
+                <button class="btn btn-outline-primary w-100 mt-3">Applica filtri</button>
+            </aside>
+
+            <!-- Contenuto principale -->
+            <section class="col-lg-9 px-4">
+                <!-- Tabs categorie -->
+                <ul class="nav nav-tabs mb-4" id="catalogTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all"
+                            type="button" role="tab" aria-controls="all" aria-selected="true">Tutti</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="art-tab" data-bs-toggle="tab" data-bs-target="#art" type="button"
+                            role="tab" aria-controls="art" aria-selected="false">Dipinti</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="docs-tab" data-bs-toggle="tab" data-bs-target="#docs" type="button"
+                            role="tab" aria-controls="docs" aria-selected="false">Sculture</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="docs-tab" data-bs-toggle="tab" data-bs-target="#docs" type="button"
+                            role="tab" aria-controls="docs" aria-selected="false">Oggetti d'arte</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="docs-tab" data-bs-toggle="tab" data-bs-target="#docs" type="button"
+                            role="tab" aria-controls="docs" aria-selected="false">Archivio</button>
+                    </li>
+                </ul>
+
+                <!-- Contenuto delle tab -->
+                <div class="tab-content" id="catalogTabsContent">
+                    <!-- Tab: Tutti -->
+                    <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+                        <div class="row g-3">
+                            <!-- Card 1 -->
+                            <div class="col-md-6 col-xl-4">
+                                <div class="card h-100">
+                                    <img src="../assets/images/403868.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Ritratto di D'Annunzio</h5>
+                                        <p class="card-text">Opera attribuita a X, 1925.</p>
+                                        <a href="items/item.html"
+                                            class="btn btn-sm btn-outline-primary">Approfondisci</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 2 -->
+                            <div class="col-md-6 col-xl-4">
+                                <div class="card h-100">
+                                    <img src="../assets/images/403868.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Lettera autografa</h5>
+                                        <p class="card-text">Corrispondenza personale, 1930.</p>
+                                        <a href="items/item.html"
+                                            class="btn btn-sm btn-outline-primary">Approfondisci</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 3 -->
+                            <div class="col-md-6 col-xl-4">
+                                <div class="card h-100">
+                                    <img src="../assets/images/403868.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Lettera autografa</h5>
+                                        <p class="card-text">Corrispondenza personale, 1930.</p>
+                                        <a href="items/item.html"
+                                            class="btn btn-sm btn-outline-primary">Approfondisci</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 4 -->
+                            <div class="col-md-6 col-xl-4">
+                                <div class="card h-100">
+                                    <img src="../assets/images/403868.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Lettera autografa</h5>
+                                        <p class="card-text">Corrispondenza personale, 1930.</p>
+                                        <a href="items/item.html"
+                                            class="btn btn-sm btn-outline-primary">Approfondisci</a>
+                                    </div>
+                                </div>
+                            </div>
+                        <!-- Card 5 -->
+                             <div class="col-md-6 col-xl-4">
+                                <div class="card h-100">
+                                    <img src="../assets/images/403868.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Lettera autografa</h5>
+                                        <p class="card-text">Corrispondenza personale, 1930.</p>
+                                        <a href="items/item.html"
+                                            class="btn btn-sm btn-outline-primary">Approfondisci</a>
+                                    </div>
+                                </div>
+                            </div>
+                        <!-- Card 6 -->
+                            <div class="col-md-6 col-xl-4">
+                                <div class="card h-100">
+                                    <img src="../assets/images/403868.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Lettera autografa</h5>
+                                        <p class="card-text">Corrispondenza personale, 1930.</p>
+                                        <a href="items/item.html"
+                                            class="btn btn-sm btn-outline-primary">Approfondisci</a>
+                                    </div>
+                                </div>
+                            </div>
+                        <!-- Card 7 -->
+                            <div class="col-md-6 col-xl-4">
+                                <div class="card h-100">
+                                    <img src="../assets/images/403868.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Lettera autografa</h5>
+                                        <p class="card-text">Corrispondenza personale, 1930.</p>
+                                        <a href="items/item.html"
+                                            class="btn btn-sm btn-outline-primary">Approfondisci</a>
+                                    </div>
+                                </div>
+                            </div>
+                        <!-- Card 8 -->
+                            <div class="col-md-6 col-xl-4">
+                                <div class="card h-100">
+                                    <img src="../assets/images/403868.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Lettera autografa</h5>
+                                        <p class="card-text">Corrispondenza personale, 1930.</p>
+                                        <a href="items/item.html"
+                                            class="btn btn-sm btn-outline-primary">Approfondisci</a>
+                                    </div>
+                                </div>
+                            </div>
+                        <!-- Card 9 -->
+                            <div class="col-md-6 col-xl-4">
+                                <div class="card h-100">
+                                    <img src="../assets/images/403868.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Lettera autografa</h5>
+                                        <p class="card-text">Corrispondenza personale, 1930.</p>
+                                        <a href="items/item.html"
+                                            class="btn btn-sm btn-outline-primary">Approfondisci</a>
+                                    </div>
+                                </div>
+                            </div>
+                         <!-- Card 10 --> 
+                            <div class="col-md-6 col-xl-4">
+                                <div class="card h-100">
+                                    <img src="../assets/images/403868.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Lettera autografa</h5>
+                                        <p class="card-text">Corrispondenza personale, 1930.</p>
+                                        <a href="items/item.html"
+                                            class="btn btn-sm btn-outline-primary">Approfondisci</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Altre tab vuote per ora -->
+                    <div class="tab-pane fade" id="art" role="tabpanel" aria-labelledby="art-tab">
+                        <p>Contenuti in caricamento...</p>
+                    </div>
+                    <div class="tab-pane fade" id="docs" role="tabpanel" aria-labelledby="docs-tab">
+                        <p>Contenuti in caricamento...</p>
+                    </div>
+                    <div class="tab-pane fade" id="objects" role="tabpanel" aria-labelledby="objects-tab">
+                        <p>Contenuti in caricamento...</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+
+    <footer class="bg-dark text-white py-4 mt-auto">
+        <div class="container text-center">
+            <p class="mb-1">© 2025 D'Annunzio e il Dèco. Tutti i diritti riservati.</p>
+            <ul class="list-inline mb-0">
+                <li class="list-inline-item"><a href="/privacy.html"
+                        class="text-white text-decoration-underline">Privacy</a></li>
+                <li class="list-inline-item"><a href="/contatti.html"
+                        class="text-white text-decoration-underline">Contatti</a></li>
+                <li class="list-inline-item"><a href="/credits.html"
+                        class="text-white text-decoration-underline">Crediti</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

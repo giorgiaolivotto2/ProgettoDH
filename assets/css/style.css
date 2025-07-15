@@ -1,0 +1,44 @@
+.hero-section {
+    background-image: url('../images/ninfaecentauro.jpg');
+    background-size: cover;
+    background-position: top;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
+    text-shadow: 1px 1px 4px black;
+}
+
+.hero-button {
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    color: white;
+    background-color: black;
+    border-color: whitesmoke;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    background-color: gold;
+    border-color: whitesmoke;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
