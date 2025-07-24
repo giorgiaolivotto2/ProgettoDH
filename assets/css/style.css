@@ -13,6 +13,7 @@
 
 .hero-button {
     padding: 1rem 2rem;
+    font-family: 'Lora', serif;
     font-size: 1.5rem;
     color: white;
     background-color: black;
@@ -28,6 +29,22 @@
     border-color: whitesmoke;
 }
 
+.main-catalog-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 2px solid #333;
+    cursor: pointer;
+    onmouseover="this.style.backgroundColor='#555';
+    this.style.borderColor='#555';
+    onmouseout="this.style.backgroundColor='#333';
+    this.style.borderColor='#333';
+}
+
 html,
 body {
     height: 100%;
@@ -41,4 +58,8 @@ body {
 
 main {
     flex: 1;
+}
+
+.navbar {
+    font-family: 'Lora', serif;
 }
