@@ -1,20 +1,19 @@
 <!doctype html>
-<html lang="en">
+<html lang="it">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>D'Annunzio e il Dèco - Catalogo</title>
+    <title>D'Annunzio e il Dèco - Esplora il Catalogo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style1.css">
 </head>
-
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">D'Annunzio e il Dèco</a>
+            <a class="navbar-brand" href="../index.html">D'Annunzio e il Dèco</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -23,16 +22,14 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                        <a class="nav-link" href="../index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="progetto.html">Il progetto</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Il periodo
-                        </a>
+                            aria-expanded="false">Il periodo</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Gabriele D'Annunzio</a></li>
                             <li><a class="dropdown-item" href="#">La Storia</a></li>
@@ -40,7 +37,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Risorse</a>
+                        <a class="nav-link active" aria-current="page" href="catalogo.html">Catalogo</a>
                     </li>
                 </ul>
 
@@ -48,13 +45,9 @@
                     <input class="form-control me-2" type="search" placeholder="Gabriele D'Annunzio"
                         aria-label="Search" />
                     <button class="btn btn-outline-success" type="submit">Ricerca</button>
-
-                    <!-- Language Dropdown -->
                     <div class="dropdown">
                         <button class="btn btn-outline-secondary dropdown-toggle" type="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Lingua
-                        </button>
+                            data-bs-toggle="dropdown" aria-expanded="false">Lingua</button>
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li><a class="dropdown-item" href="?lang=it">Italiano</a></li>
                             <li><a class="dropdown-item" href="?lang=en">English</a></li>
@@ -66,43 +59,78 @@
         </div>
     </nav>
 
-    <!-- Header sezione -->
-    <div class="bg-dark text-white py-4 text-center">
-        <h1 class="mb-0">Esplora il progetto</h1>
+    <!-- Hero introduttivo -->
+    <div class="antecatalogo-hero">
+        <span class="eyebrow">Catalogo delle opere</span>
+        <h1>Esplora il progetto</h1>
+        <p>Oggetti, artisti e luoghi del gusto decorativo italiano tra Otto e Novecento,
+            raccolti e descritti nell'orbita dannunziana.</p>
     </div>
 
     <main>
-        <section>
-            <div class="main-catalog-access">
-                <h2>Accesso al Catalogo Principale</h2>
-                <div class="main-catalog-button">
-                    <a href="catalogo.html">
-                        <h3>CATALOGO COMPLETO</h3>
-                        <p>Accedi al catalogo completo con tutti gli oggetti e ricerca avanzata</p>
+
+        <!-- Accesso al catalogo completo -->
+        <section class="catalogo-principale">
+            <div class="container">
+                <p class="intro">
+                    Il catalogo raccoglie tutti gli oggetti schedati, con schede complete di dati tecnici,
+                    provenienza, collocazione attuale e riferimenti bibliografici. È disponibile la ricerca
+                    per parola chiave, categoria e filtri combinati.
+                </p>
+                <a class="btn-catalogo" href="catalogo.html">Catalogo completo</a>
+            </div>
+        </section>
+
+        <!-- Divisore -->
+        <div class="deco-divider container">
+            <span>oppure esplora per tema</span>
+        </div>
+
+        <!-- Tre percorsi tematici -->
+        <section class="percorsi-section">
+            <div class="container">
+                <p>Scegli un percorso tematico per orientarti tra le opere, i protagonisti e i luoghi del Dèco italiano.</p>
+
+                <div class="percorsi-grid">
+
+                    <a class="percorso-card" href="materialitecniche.html">
+                        <div class="percorso-fan"></div>
+                        <div class="percorso-body">
+                            <span class="percorso-index">Percorso 01</span>
+                            <h2>Materiali e tecniche</h2>
+                            <p>Vetro, ceramica, ferro battuto, tessuti e smalti: il saper fare artigianale
+                                che ha dato corpo al gusto decorativo del periodo.</p>
+                            <span class="percorso-link">Esplora</span>
+                        </div>
                     </a>
+
+                    <a class="percorso-card" href="persone.html">
+                        <div class="percorso-fan"></div>
+                        <div class="percorso-body">
+                            <span class="percorso-index">Percorso 02</span>
+                            <h2>Artisti</h2>
+                            <p>Pittori, scultori, ceramisti, fabbri d'arte e i loro committenti:
+                                i protagonisti che hanno costruito l'estetica dannunziana.</p>
+                            <span class="percorso-link">Esplora</span>
+                        </div>
+                    </a>
+
+                    <a class="percorso-card" href="luoghi.html">
+                        <div class="percorso-fan"></div>
+                        <div class="percorso-body">
+                            <span class="percorso-index">Percorso 03</span>
+                            <h2>Luoghi</h2>
+                            <p>Musei, case museo, manifatture e collezioni private: i luoghi
+                                dove il Dèco italiano si è sedimentato e si può ancora incontrare.</p>
+                            <span class="percorso-link">Esplora</span>
+                        </div>
+                    </a>
+
                 </div>
-            </div>   
-        </section>
-        <section>
-            <div>
-    
-                <a href="pagina_materialietecniche.html" style="display: inline-block; padding: 15px 30px; background-color: #333; color: white; text-decoration: none; font-size: 1.2rem; font-weight: bold; border: 2px solid #333; cursor: pointer;" onmouseover="this.style.backgroundColor='#555'; this.style.borderColor='#555';" onmouseout="this.style.backgroundColor='#333'; this.style.borderColor='#333';">Materiali e Tecniche</a>
             </div>
-            <div>
+        </section>
 
-                <a href="pagina_artisti.html" style="display: inline-block; padding: 15px 30px; background-color: #333; color: white; text-decoration: none; font-size: 1.2rem; font-weight: bold; border: 2px solid #333; cursor: pointer;" onmouseover="this.style.backgroundColor='#555'; this.style.borderColor='#555';" onmouseout="this.style.backgroundColor='#333'; this.style.borderColor='#333';">Artisti</a>
-            </div>
-            <div>
-                <a href="pagina_luoghi.html" style="display: inline-block; padding: 15px 30px; background-color: #333; color: white; text-decoration: none; font-size: 1.2rem; font-weight: bold; border: 2px solid #333; cursor: pointer;" onmouseover="this.style.backgroundColor='#555'; this.style.borderColor='#555';" onmouseout="this.style.backgroundColor='#333'; this.style.borderColor='#333';">Luoghi</a>
-            </div>
-                <div>
-                    <button class="btn btn-primary btn-lg px-5 py-3 rounded-pill">
-                      Inizia Ora
-                    </button>
-            </div>
-        </section>
     </main>
-
 
     <footer class="bg-dark text-white py-4 mt-auto">
         <div class="container text-center">
@@ -117,6 +145,7 @@
             </ul>
         </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>

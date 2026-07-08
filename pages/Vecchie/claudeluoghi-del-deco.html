@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="it">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>D'Annunzio e il Dèco - Luoghi del Dèco</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="../assets/css/style2claude.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">D'Annunzio e il Dèco</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/prgetto.html">Il progetto</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Il periodo
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Gabriele D'Annunzio</a></li>
+                            <li><a class="dropdown-item" href="#">La Storia</a></li>
+                            <li><a class="dropdown-item" href="#">Le arti decorative</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="luoghi-del-deco.html">Luoghi del Dèco</a>
+                    </li>
+                </ul>
+
+                <form class="d-flex align-items-center gap-2" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Gabriele D'Annunzio"
+                        aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">Ricerca</button>
+
+                    <div class="dropdown">
+                        <button class="btn btn-outline-secondary dropdown-toggle" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Lingua
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="?lang=it">Italiano</a></li>
+                            <li><a class="dropdown-item" href="?lang=en">English</a></li>
+                            <li><a class="dropdown-item" href="?lang=fr">Français</a></li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section>
+            <div class="container">
+                <div class="hero-figure">
+                    <img src="../assets/images/Vittoriale.jpg"
+                        alt="esempio scelto per rappresentare tecniche e materiali diversi: tripode realizzato da Carlo Rizzarda e Giuseppe Guidi">
+                    <div class="text-block">
+                        <h2>LUOGHI</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="luoghi-section">
+            <div class="container">
+                <p class="section-lede">
+                    Un itinerario tra ville, caffè storici e architetture che custodiscono ancora oggi lo spirito
+                    decorativo del periodo dannunziano. Seleziona un luogo dall'elenco o dalla mappa per scoprirne la
+                    storia.
+                </p>
+
+                <div class="luoghi-layout">
+
+                    <ul class="luoghi-list" id="luoghi-list">
+                        <li class="luogo-item active" data-lat="45.6225" data-lng="10.5658" tabindex="0">
+                            <span class="luogo-index">01</span>
+                            <div>
+                                <h3>Il Vittoriale degli Italiani</h3>
+                                <p class="luogo-loc">Gardone Riviera (BS)</p>
+                                <p class="luogo-desc">La residenza-museo di Gabriele D'Annunzio, un complesso
+                                    monumentale che intreccia eclettismo, simbolismo e gusto decorativo.</p>
+                            </div>
+                        </li>
+                        <li class="luogo-item" data-lat="46.018277824298494" data-lng="11.907907152669937" tabindex="0">
+                            <span class="luogo-index">02</span>
+                            <div>
+                                <h3>Galleria d'Arte Moderna "Carlo Rizzarda"</h3>
+                                <p class="luogo-loc">Feltre</p>
+                                <p class="luogo-desc">Museo con alcune delle più ricche collezioni déco, ferri battuti e vetri muranesi.</p>
+                            </div>
+                        </li>
+                        <li class="luogo-item" data-lat="45.6495" data-lng="13.7768" tabindex="0">
+                            <span class="luogo-index">03</span>
+                            <div>
+                                <h3>Caffè San Marco</h3>
+                                <p class="luogo-loc">Trieste</p>
+                                <p class="luogo-desc">Storico caffè letterario, luogo d'incontro di artisti e
+                                    intellettuali tra Otto e Novecento, con arredi d'epoca.</p>
+                            </div>
+                        </li>
+                        <li class="luogo-item" data-lat="41.8302" data-lng="12.4734" tabindex="0">
+                            <span class="luogo-index">04</span>
+                            <div>
+                                <h3>Palazzo della Civiltà Italiana</h3>
+                                <p class="luogo-loc">Roma, quartiere EUR</p>
+                                <p class="luogo-desc">Conosciuto come il "Colosseo Quadrato", icona dell'architettura
+                                    geometrica e monumentale del Novecento italiano.</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div id="deco-map" role="application" aria-label="Mappa dei luoghi del Dèco"></div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white py-4 mt-auto">
+        <div class="container text-center">
+            <p class="mb-1">© 2025 D'Annunzio e il Dèco. Tutti i diritti riservati.</p>
+            <ul class="list-inline mb-0">
+                <li class="list-inline-item"><a href="/privacy.html"
+                        class="text-white text-decoration-underline">Privacy</a></li>
+                <li class="list-inline-item"><a href="/contatti.html"
+                        class="text-white text-decoration-underline">Contatti</a></li>
+                <li class="list-inline-item"><a href="/credits.html"
+                        class="text-white text-decoration-underline">Crediti</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+        <script>
+        (function () {
+            const bar = document.querySelector('.text-block');
+            const stopBefore = document.querySelector('.luoghi-section');
+            if (!bar || !stopBefore) return;
+ 
+            function update() {
+                const stopY = stopBefore.offsetTop; // punto dove la barra deve fermarsi
+                const barCenterIfFixed = window.scrollY + (window.innerHeight / 2);
+ 
+                if (barCenterIfFixed >= stopY) {
+                    bar.style.setProperty('--stop-y', stopY + 'px');
+                    bar.classList.add('is-stopped');
+                } else {
+                    bar.classList.remove('is-stopped');
+                }
+            }
+ 
+            update();
+            window.addEventListener('scroll', update, { passive: true });
+            window.addEventListener('resize', update);
+        })();
+    </script>
+
+    <script>
+        (function () {
+            const items = Array.from(document.querySelectorAll('.luogo-item'));
+
+            // Icona personalizzata a forma di gemma Dèco
+            const decoIcon = L.divIcon({
+                className: 'deco-marker',
+                html: '<span></span>',
+                iconSize: [22, 22],
+                iconAnchor: [11, 11],
+                popupAnchor: [0, -12]
+            });
+
+            const map = L.map('deco-map', { scrollWheelZoom: false }).setView([44.5, 11.5], 6);
+
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+                attribution: '&copy; OpenStreetMap &copy; CARTO',
+                maxZoom: 19
+            }).addTo(map);
+
+            const markers = items.map((item) => {
+                const lat = parseFloat(item.dataset.lat);
+                const lng = parseFloat(item.dataset.lng);
+                const title = item.querySelector('h3').textContent;
+                const loc = item.querySelector('.luogo-loc').textContent;
+
+                const marker = L.marker([lat, lng], { icon: decoIcon }).addTo(map);
+                marker.bindPopup('<strong>' + title + '</strong><br>' + loc);
+
+                marker.on('click', () => setActive(item));
+                return marker;
+            });
+
+            function setActive(activeItem) {
+                items.forEach((i) => i.classList.remove('active'));
+                activeItem.classList.add('active');
+            }
+
+            items.forEach((item, index) => {
+                const focusOnMap = () => {
+                    const lat = parseFloat(item.dataset.lat);
+                    const lng = parseFloat(item.dataset.lng);
+                    map.flyTo([lat, lng], 13, { duration: 0.8 });
+                    markers[index].openPopup();
+                    setActive(item);
+                };
+                item.addEventListener('click', focusOnMap);
+                item.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') focusOnMap();
+                });
+            });
+        })();
+    </script>
+</body>
+
+</html>

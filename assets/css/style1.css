@@ -1,5 +1,119 @@
-.container {
+/* =========================================================
+   D'Annunzio e il Dèco — Stylesheet (palette Rosa Antico)
+   ========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;500;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Lora:wght@400;500&family=Montserrat:wght@400;500;600&display=swap");
+
+/* ---------- Variabili ---------- */
+:root {
+  --deco-scuro:      #2e1a1a;   /* bordeaux molto scuro */
+  --deco-scuro-soft: #3d2323;   /* bordeaux morbido */
+  --deco-rosa:       #b07080;   /* rosa antico principale */
+  --deco-rosa-light: #e8c4c0;   /* cipria chiara */
+  --deco-cipria:      #faf0ef;   /* bianco rosato caldo */
+  --deco-prugna:    #7a3e4e;   /* prugna (accento scuro) */
+  --deco-line:       rgba(176, 112, 128, 0.35);
+
+  --font-display:  "Cinzel Decorative", "Cinzel", serif;
+  --font-heading:  "Cinzel", serif;
+  --font-body:     "EB Garamond", Georgia, serif;
+  --font-utility:  "Lora", sans-serif;
+}
+
+/* ---------- Base ---------- */
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--deco-cipria);
+  color: var(--deco-scuro);
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+}
+
+a       { color: var(--deco-prugna); }
+a:hover { color: var(--deco-rosa); }
+
+/* ---------- Navbar ---------- */
+.navbar.bg-dark {
+  background-color: var(--deco-scuro) !important;
+  border-bottom: 2px solid var(--deco-rosa) !important;
+}
+
+.navbar-brand {
+  font-family: var(--font-display);
+  letter-spacing: 0.08em;
+  color: var(--deco-rosa-light) !important;
+  font-size: 1.3rem;
+}
+
+.navbar .nav-link {
+  font-family: var(--font-utility);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+  color: var(--deco-cipria) !important;
   position: relative;
+  padding-bottom: 2px;
+}
+
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 1px;
+  background: var(--deco-rosa);
+  transition: width 0.25s ease;
+}
+
+.navbar .nav-link:hover::after,
+.navbar .nav-link.active::after { width: 100%; }
+
+.navbar .nav-link.active,
+.navbar .nav-link:hover { color: var(--deco-rosa-light) !important; }
+
+.navbar .dropdown-menu {
+  background-color: var(--deco-scuro-soft);
+  border: 1px solid var(--deco-line);
+}
+
+.navbar .dropdown-item {
+  color: var(--deco-cipria);
+  font-family: var(--font-utility);
+  font-size: 0.85rem;
+}
+
+.navbar .dropdown-item:hover {
+  background-color: var(--deco-prugna);
+  color: var(--deco-rosa-light);
+}
+
+.navbar .form-control,
+.navbar .btn-outline-success,
+.navbar .btn-outline-secondary {
+  border-radius: 0;
+  font-family: var(--font-utility);
+  font-size: 0.85rem;
+}
+
+.navbar .btn-outline-success {
+  color: var(--deco-rosa-light);
+  border-color: var(--deco-rosa);
+}
+
+.navbar .btn-outline-success:hover {
+  background-color: var(--deco-rosa);
+  color: var(--deco-scuro);
+}
+
+/* ---------- Hero con barra titolo scorrevole ---------- */
+.container { position: relative; }
+
+.hero-figure img {
+  display: block;
+  width: 100%;
+  filter: saturate(0.92) contrast(1.03);
 }
 
 .text-block {
@@ -8,8 +122,8 @@
   left: 0;
   width: 100vw;
   height: 50px;
-  background-color: rgba(0, 0, 0, 0.3);
-  color: white;
+  background-color: rgba(46, 26, 26, 0.45);
+  color: var(--deco-cipria);
   padding: 0 20px;
   margin: 0;
   transform: translateY(-50%);
@@ -17,7 +131,417 @@
   align-items: center;
   justify-content: center;
   z-index: 1000;
+}
+
+.text-block h2 {
+  margin: 0;
   font-family: 'Lora', serif;
   font-size: 18px;
   font-weight: 400;
+  letter-spacing: 0.15em;
+  color: var(--deco-rosa-light);
+}
+
+.text-block.is-stopped {
+  position: absolute;
+  top: var(--stop-y, 0px);
+}
+
+.section-lede {
+  max-width: 720px;
+  margin: 2.2rem auto 0.5rem;
+  text-align: center;
+  font-style: italic;
+  color: var(--deco-scuro-soft);
+}
+
+/* ---------- Griglia schede (Materiali, Artisti) ---------- */
+.materiali-section,
+.artisti-section {
+  padding: 3rem 0 4rem;
+}
+
+.materiali-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+  margin-top: 2.2rem;
+}
+
+@media (max-width: 991px) { .materiali-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 575px)  { .materiali-grid { grid-template-columns: 1fr; } }
+
+.materiale-card {
+  display: block;
+  position: relative;
+  background-color: var(--deco-scuro-soft);
+  border: 1px solid var(--deco-line);
+  text-decoration: none;
+  overflow: hidden;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.materiale-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--deco-rosa);
+}
+
+.materiale-card .fan {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background:
+    radial-gradient(circle at 50% 120%, var(--deco-rosa) 0%, transparent 45%),
+    repeating-conic-gradient(from 0deg at 50% 120%,
+      var(--deco-prugna) 0deg 8deg,
+      var(--deco-scuro)   8deg 16deg);
+  opacity: 0.55;
+}
+
+.materiale-card .card-caption {
+  padding: 1.1rem 1.2rem 1.3rem;
+  text-align: center;
+}
+
+.materiale-card .card-index {
+  display: block;
+  font-family: var(--font-utility);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: var(--deco-rosa);
+  margin-bottom: 0.35rem;
+}
+
+.materiale-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+  color: var(--deco-cipria);
+  margin: 0;
+}
+
+.materiale-card p {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: rgba(250, 240, 239, 0.75);
+  margin: 0.5rem 0 0;
+}
+
+.is-hidden { display: none; }
+
+/* ---------- Luoghi: filtri + layout lista+mappa ---------- */
+.luoghi-section { padding: 3rem 0 4rem; }
+
+.luoghi-filtri {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.6rem;
+}
+
+.filtro-btn {
+  font-family: var(--font-utility);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: var(--deco-scuro);
+  border: 1px solid var(--deco-rosa);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.filtro-btn:hover { background-color: rgba(176, 112, 128, 0.15); }
+
+.filtro-btn.active {
+  background-color: var(--deco-scuro);
+  color: var(--deco-rosa-light);
+  border-color: var(--deco-scuro);
+}
+
+.luogo-tag {
+  display: inline-block;
+  font-family: var(--font-utility);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--deco-cipria);
+  background-color: var(--deco-rosa);
+  padding: 0.15rem 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.luoghi-layout {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 1.8rem;
+  margin-top: 2.2rem;
+  align-items: stretch;
+}
+
+@media (max-width: 900px) { .luoghi-layout { grid-template-columns: 1fr; } }
+
+.luoghi-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  max-height: 520px;
+  overflow-y: auto;
+}
+
+.luogo-item {
+  display: flex;
+  gap: 0.9rem;
+  background-color: var(--deco-scuro-soft);
+  border: 1px solid var(--deco-line);
+  border-left: 3px solid transparent;
+  padding: 1rem 1.1rem;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.luogo-item:hover { border-color: var(--deco-rosa); }
+
+.luogo-item.active {
+  border-left-color: var(--deco-rosa);
+  background-color: var(--deco-prugna);
+}
+
+.luogo-index {
+  font-family: var(--font-utility);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  color: var(--deco-rosa);
+  flex-shrink: 0;
+  padding-top: 0.15rem;
+}
+
+.luogo-item h3 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--deco-cipria);
+  margin: 0 0 0.15rem;
+}
+
+.luogo-loc {
+  font-family: var(--font-utility);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--deco-rosa-light);
+  margin: 0 0 0.4rem;
+}
+
+.luogo-desc {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: rgba(250, 240, 239, 0.8);
+  margin: 0;
+}
+
+#deco-map {
+  min-height: 420px;
+  height: 520px;
+  border: 1px solid var(--deco-line);
+  filter: sepia(12%) saturate(80%);
+}
+
+.deco-marker span {
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-color: var(--deco-rosa);
+  border: 2px solid var(--deco-scuro);
+  transform: rotate(45deg);
+  box-shadow: 0 0 0 3px rgba(176, 112, 128, 0.3);
+}
+
+.leaflet-popup-content-wrapper {
+  background-color: var(--deco-scuro-soft);
+  color: var(--deco-cipria);
+  border: 1px solid var(--deco-rosa);
+  border-radius: 0;
+  font-family: var(--font-body);
+}
+
+.leaflet-popup-tip { background-color: var(--deco-scuro-soft); }
+
+.leaflet-popup-content strong {
+  font-family: var(--font-heading);
+  color: var(--deco-rosa-light);
+}
+
+/* ---------- Pagine di dettaglio (tecnica / luogo / artista) ---------- */
+.dettaglio-hero {
+  background-color: var(--deco-scuro);
+  color: var(--deco-cipria);
+  padding: 3.5rem 1rem 2.5rem;
+  text-align: center;
+  border-bottom: 4px double var(--deco-rosa);
+}
+
+.dettaglio-hero .eyebrow {
+  font-family: var(--font-utility);
+  letter-spacing: 0.25em;
+  font-size: 0.78rem;
+  color: var(--deco-rosa);
+  text-transform: uppercase;
+}
+
+.dettaglio-hero h1 {
+  font-family: var(--font-display);
+  letter-spacing: 0.06em;
+  color: var(--deco-rosa-light);
+  margin-top: 0.6rem;
+}
+
+.breadcrumb-deco {
+  font-family: var(--font-utility);
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.breadcrumb-deco a { color: var(--deco-rosa); }
+
+.dettaglio-layout {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 3rem;
+  align-items: start;
+  max-width: 1020px;
+  margin: 0 auto 3rem;
+  padding: 0 1rem;
+}
+
+@media (max-width: 860px) { .dettaglio-layout { grid-template-columns: 1fr; } }
+
+.dettaglio-body h2 {
+  font-family: var(--font-heading);
+  color: var(--deco-prugna);
+  border-bottom: 1px solid var(--deco-rosa);
+  padding-bottom: 0.4rem;
+  margin-top: 2rem;
+}
+
+.scheda-laterale {
+  position: sticky;
+  top: 1.5rem;
+  background-color: var(--deco-scuro-soft);
+  border: 1px solid var(--deco-line);
+  border-top: 3px solid var(--deco-rosa);
+  padding: 1.4rem 1.3rem 1.6rem;
+}
+
+.scheda-laterale h4 {
+  font-family: var(--font-utility);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--deco-rosa);
+  margin-bottom: 1rem;
+}
+
+.scheda-laterale dt {
+  font-family: var(--font-utility);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  color: rgba(250, 240, 239, 0.6);
+  margin-top: 0.8rem;
+}
+
+.scheda-laterale dd {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--deco-cipria);
+  margin: 0.1rem 0 0;
+}
+
+.scheda-laterale .scheda-sep {
+  border: none;
+  border-top: 1px solid var(--deco-line);
+  margin: 1.2rem 0 0;
+}
+
+.deco-pullquote {
+  border-left: 3px solid var(--deco-rosa);
+  margin: 2rem 0;
+  padding: 1rem 1.4rem;
+  background-color: rgba(176, 112, 128, 0.08);
+}
+
+.deco-pullquote p {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--deco-scuro);
+  margin: 0 0 0.4rem;
+}
+
+.deco-pullquote cite {
+  font-family: var(--font-utility);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  color: var(--deco-rosa);
+  font-style: normal;
+}
+
+.correlati {
+  border-top: 1px solid var(--deco-line);
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+}
+
+.correlati h3 {
+  font-family: var(--font-utility);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--deco-rosa);
+  margin-bottom: 1rem;
+}
+
+.correlati ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.correlati ul li a {
+  display: inline-block;
+  font-family: var(--font-utility);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  color: var(--deco-cipria);
+  background-color: var(--deco-scuro-soft);
+  border: 1px solid var(--deco-line);
+  padding: 0.4rem 0.9rem;
+  text-decoration: none;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.correlati ul li a:hover {
+  border-color: var(--deco-rosa);
+  color: var(--deco-rosa-light);
+}
+
+/* ---------- Footer ---------- */
+footer.bg-dark { border-top: 2px solid var(--deco-rosa); }
+
+footer .list-inline-item a {
+  font-family: var(--font-utility);
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+}
+
+footer p {
+  font-family: var(--font-utility);
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
 }

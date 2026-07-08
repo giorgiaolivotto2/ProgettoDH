@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="it">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>D'Annunzio e il Dèco - Materiali e Tecniche</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/style1.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">D'Annunzio e il Dèco</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/progetto.html">Il progetto</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Il periodo
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Gabriele D'Annunzio</a></li>
+                            <li><a class="dropdown-item" href="#">La Storia</a></li>
+                            <li><a class="dropdown-item" href="#">Le arti decorative</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Risorse</a>
+                    </li>
+                </ul>
+
+                <form class="d-flex align-items-center gap-2" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Gabriele D'Annunzio"
+                        aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">Ricerca</button>
+
+                    <!-- Language Dropdown -->
+                    <div class="dropdown">
+                        <button class="btn btn-outline-secondary dropdown-toggle" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Lingua
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="?lang=it">Italiano</a></li>
+                            <li><a class="dropdown-item" href="?lang=en">English</a></li>
+                            <li><a class="dropdown-item" href="?lang=fr">Français</a></li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section>
+            <div class="container">
+                <div class="hero-figure">
+                    <img src="../assets/images/tripodealto.jpg"
+                        alt="esempio scelto per rappresentare tecniche e materiali diversi: tripode realizzato da Carlo Rizzarda e Giuseppe Guidi">
+                    <div class="text-block">
+                        <h2>MATERIALI E TECNICHE</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="materiali-section">
+            <div class="container">
+                <p class="section-lede">
+                    Dal vetro muranese ai ferri battuti, ogni materia racconta un saper fare. Scegli una scheda
+                    per scoprire storia, tecniche e protagonisti di ciascuna arte decorativa del periodo dannunziano.
+                </p>
+
+                <div class="materiali-grid">
+                    <!-- Link attivo --> 
+                    <a class="materiale-card" href="artistiluoghitecniche/vetromuranese.html">
+                        <div class="fan"></div>
+                        <div class="card-caption">
+                            <span class="card-index">01 — Vetro</span>
+                            <h3>Vetro muranese</h3>
+                            <p>Soffio, colore e trasparenza tra Murano e il gusto Dèco.</p>
+                        </div>
+                    </a>
+
+                    <a class="materiale-card" href="pages/materiali/disegni-stampe.html">
+                        <div class="fan"></div>
+                        <div class="card-caption">
+                            <span class="card-index">02 — Grafica</span>
+                            <h3>Disegni e stampe</h3>
+                            <p>Manifesti, illustrazioni e l'arte applicata alla carta.</p>
+                        </div>
+                    </a>
+
+                    <a class="materiale-card" href="pages/materiali/architetture.html">
+                        <div class="fan"></div>
+                        <div class="card-caption">
+                            <span class="card-index">03 — Architettura</span>
+                            <h3>Architetture</h3>
+                            <p>Linee geometriche e facciate del nuovo gusto decorativo.</p>
+                        </div>
+                    </a>
+
+                    <a class="materiale-card" href="pages/materiali/ceramiche.html">
+                        <div class="fan"></div>
+                        <div class="card-caption">
+                            <span class="card-index">04 — Ceramica</span>
+                            <h3>Ceramiche artistiche</h3>
+                            <p>Smalti, forme e botteghe della ceramica decorativa.</p>
+                        </div>
+                    </a>
+
+                    <a class="materiale-card" href="pages/materiali/tessili.html">
+                        <div class="fan"></div>
+                        <div class="card-caption">
+                            <span class="card-index">05 — Tessuto</span>
+                            <h3>Tessili e tappezzerie</h3>
+                            <p>Motivi geometrici e materie pregiate per l'arredo.</p>
+                        </div>
+                    </a>
+                    <!-- Link attivo -->
+                    <a class="materiale-card" href="artistiluoghitecniche/ferrobattuto.html">
+                        <div class="fan"></div>
+                        <div class="card-caption">
+                            <span class="card-index">06 — Metallo</span>
+                            <h3>Ferri battuti</h3>
+                            <p>La maestria del fabbro tra cancellate e oggetti d'arte.</p>
+                        </div>
+                    </a>
+
+                    <a class="materiale-card" href="pages/materiali/dipinti.html">
+                        <div class="fan"></div>
+                        <div class="card-caption">
+                            <span class="card-index">07 — Pittura</span>
+                            <h3>Dipinti</h3>
+                            <p>Tele e ritratti tra simbolismo e atmosfere dannunziane.</p>
+                        </div>
+                    </a>
+
+                    <a class="materiale-card" href="pages/materiali/vetrate.html">
+                        <div class="fan"></div>
+                        <div class="card-caption">
+                            <span class="card-index">08 — Luce</span>
+                            <h3>Vetrate</h3>
+                            <p>Composizioni luminose per finestre e lucernari.</p>
+                        </div>
+                    </a>
+
+                    <a class="materiale-card" href="pages/materiali/smalti.html">
+                        <div class="fan"></div>
+                        <div class="card-caption">
+                            <span class="card-index">09 — Smalto</span>
+                            <h3>Smalti</h3>
+                            <p>Colore vetrificato su metallo, tra preziosità e dettaglio.</p>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white py-4 mt-auto">
+        <div class="container text-center">
+            <p class="mb-1">© 2025 D'Annunzio e il Dèco. Tutti i diritti riservati.</p>
+            <ul class="list-inline mb-0">
+                <li class="list-inline-item"><a href="/privacy.html"
+                        class="text-white text-decoration-underline">Privacy</a></li>
+                <li class="list-inline-item"><a href="/contatti.html"
+                        class="text-white text-decoration-underline">Contatti</a></li>
+                <li class="list-inline-item"><a href="/credits.html"
+                        class="text-white text-decoration-underline">Crediti</a></li>
+            </ul>
+        </div>
+    </footer>
+
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+
+     <script>
+        (function () {
+            const bar = document.querySelector('.text-block');
+            const stopBefore = document.querySelector('.materiali-section');
+            if (!bar || !stopBefore) return;
+ 
+            function update() {
+                const stopY = stopBefore.offsetTop; // punto dove la barra deve fermarsi
+                const barCenterIfFixed = window.scrollY + (window.innerHeight / 2);
+ 
+                if (barCenterIfFixed >= stopY) {
+                    bar.style.setProperty('--stop-y', stopY + 'px');
+                    bar.classList.add('is-stopped');
+                } else {
+                    bar.classList.remove('is-stopped');
+                }
+            }
+ 
+            update();
+            window.addEventListener('scroll', update, { passive: true });
+            window.addEventListener('resize', update);
+        })();
+    </script>
+</body>
+
+</html>

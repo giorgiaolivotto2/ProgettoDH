@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="it">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>D'Annunzio e il Dèco - Luoghi del Dèco</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="../assets/css/style1.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">D'Annunzio e il Dèco</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/prgetto.html">Il progetto</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Il periodo
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Gabriele D'Annunzio</a></li>
+                            <li><a class="dropdown-item" href="#">La Storia</a></li>
+                            <li><a class="dropdown-item" href="#">Le arti decorative</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="luoghi.html">Luoghi</a>
+                    </li>
+                </ul>
+
+                <form class="d-flex align-items-center gap-2" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Gabriele D'Annunzio"
+                        aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">Ricerca</button>
+
+                    <div class="dropdown">
+                        <button class="btn btn-outline-secondary dropdown-toggle" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Lingua
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="?lang=it">Italiano</a></li>
+                            <li><a class="dropdown-item" href="?lang=en">English</a></li>
+                            <li><a class="dropdown-item" href="?lang=fr">Français</a></li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section>
+            <div class="container">
+                <div class="hero-figure">
+                    <img src="assets/images/Capesaro.jpg"
+                        alt="Museo d'arte moderna Ca'Pesaro a Venezia">
+                    <div class="text-block">
+                        <h2>LUOGHI</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="luoghi-section">
+            <div class="container">
+                <p class="section-lede">
+                    Un itinerario tra musei, case museo e manifatture che custodiscono ancora oggi lo spirito
+                    decorativo del periodo dannunziano. Filtra per tipologia, poi seleziona un luogo dall'elenco o
+                    dalla mappa per scoprirne la storia.
+                </p>
+
+                <div class="luoghi-filtri" role="group" aria-label="Filtra i luoghi per tipologia">
+                    <button type="button" class="filtro-btn active" data-filter="tutti">Tutti</button>
+                    <button type="button" class="filtro-btn" data-filter="museo">Musei</button>
+                    <button type="button" class="filtro-btn" data-filter="casa-museo">Case museo / collezioni private</button>
+                    <button type="button" class="filtro-btn" data-filter="manifattura">Manifatture</button>
+                </div>
+
+                <div class="luoghi-layout">
+
+                    <ul class="luoghi-list" id="luoghi-list">
+                        <li class="luogo-item active" data-categoria="casa-museo" data-lat="45.6225" data-lng="10.5658" tabindex="0">
+                            <span class="luogo-index">01</span>
+                            <div>
+                                <span class="luogo-tag">Casa museo</span>
+                                <h3 href="artistiluoghitecniche/vittoriale.html">Il Vittoriale degli Italiani </h3>
+                                <p class="luogo-loc">Gardone Riviera (BS)</p>
+                                <p class="luogo-desc">La residenza-museo di Gabriele D'Annunzio, un complesso
+                                    monumentale che intreccia eclettismo, simbolismo e gusto decorativo.</p>
+                            </div>
+                        </li>
+                        <li class="luogo-item" data-categoria="casa-museo" data-lat="45.4685" data-lng="9.2010" tabindex="0">
+                            <span class="luogo-index">02</span>
+                            <div>
+                                <span class="luogo-tag">Casa museo</span>
+                                <h3>Villa Necchi Campiglio</h3>
+                                <p class="luogo-loc">Milano</p>
+                                <p class="luogo-desc">Esempio di architettura razionalista con interni Dèco, oggi
+                                    casa museo aperta al pubblico nel cuore di Milano.</p>
+                            </div>
+                        </li>
+                        <li class="luogo-item" data-categoria="museo" data-lat="45.5050" data-lng="12.3450" tabindex="0">
+                            <span class="luogo-index">03</span>
+                            <div>
+                                <span class="luogo-tag">Museo</span>
+                                <h3>Museo del Vetro di Murano</h3>
+                                <p class="luogo-loc">Murano, Venezia</p>
+                                <p class="luogo-desc">Racconta la storia della tradizione vetraria muranese, con
+                                    sale dedicate anche alla produzione del primo Novecento.</p>
+                            </div>
+                        </li>
+                        <li class="luogo-item" data-categoria="manifattura" data-lat="46.0167" data-lng="11.9000" tabindex="0">
+                            <span class="luogo-index">04</span>
+                            <div>
+                                <span class="luogo-tag">Manifattura</span>
+                                <h3 href="artistiluoghitecniche/galleriarizzarda.html">Museo Carlo Rizzarda</h3>
+                                <p class="luogo-loc">Feltre (BL)</p>
+                                <p class="luogo-desc">Ospitato nell'antica officina del fabbro d'arte, conserva
+                                    opere e strumenti della manifattura del ferro battuto Dèco.</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div id="deco-map" role="application" aria-label="Mappa dei luoghi del Dèco"></div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white py-4 mt-auto">
+        <div class="container text-center">
+            <p class="mb-1">© 2025 D'Annunzio e il Dèco. Tutti i diritti riservati.</p>
+            <ul class="list-inline mb-0">
+                <li class="list-inline-item"><a href="/privacy.html"
+                        class="text-white text-decoration-underline">Privacy</a></li>
+                <li class="list-inline-item"><a href="/contatti.html"
+                        class="text-white text-decoration-underline">Contatti</a></li>
+                <li class="list-inline-item"><a href="/credits.html"
+                        class="text-white text-decoration-underline">Crediti</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <script>
+        (function () {
+            const items = Array.from(document.querySelectorAll('.luogo-item'));
+            const filterButtons = Array.from(document.querySelectorAll('.filtro-btn'));
+
+            // Icona personalizzata a forma di gemma Dèco
+            const decoIcon = L.divIcon({
+                className: 'deco-marker',
+                html: '<span></span>',
+                iconSize: [22, 22],
+                iconAnchor: [11, 11],
+                popupAnchor: [0, -12]
+            });
+
+            const map = L.map('deco-map', { scrollWheelZoom: false }).setView([44.5, 11.5], 6);
+
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+                attribution: '&copy; OpenStreetMap &copy; CARTO',
+                maxZoom: 19
+            }).addTo(map);
+
+            // Un marker per ogni luogo, associato al relativo elemento della lista
+            const places = items.map((item) => {
+                const lat = parseFloat(item.dataset.lat);
+                const lng = parseFloat(item.dataset.lng);
+                const title = item.querySelector('h3').textContent;
+                const loc = item.querySelector('.luogo-loc').textContent;
+
+                const marker = L.marker([lat, lng], { icon: decoIcon });
+                marker.bindPopup('<strong>' + title + '</strong><br>' + loc);
+                marker.on('click', () => setActive(item));
+
+                return { item, marker, categoria: item.dataset.categoria };
+            });
+
+            function setActive(activeItem) {
+                items.forEach((i) => i.classList.remove('active'));
+                activeItem.classList.add('active');
+            }
+
+            function focusOnMap(place) {
+                const lat = parseFloat(place.item.dataset.lat);
+                const lng = parseFloat(place.item.dataset.lng);
+                map.flyTo([lat, lng], 13, { duration: 0.8 });
+                place.marker.openPopup();
+                setActive(place.item);
+            }
+
+            places.forEach((place) => {
+                place.item.addEventListener('click', () => focusOnMap(place));
+                place.item.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') focusOnMap(place);
+                });
+            });
+
+            // Applica il filtro: mostra/nasconde le voci della lista e i marker sulla mappa
+            function applyFilter(filter) {
+                const visiblePlaces = [];
+
+                places.forEach((place) => {
+                    const match = filter === 'tutti' || place.categoria === filter;
+
+                    place.item.classList.toggle('is-hidden', !match);
+
+                    if (match) {
+                        place.marker.addTo(map);
+                        visiblePlaces.push(place);
+                    } else {
+                        place.marker.remove();
+                    }
+                });
+
+                // Centra/adatta la mappa sui soli luoghi visibili
+                if (visiblePlaces.length) {
+                    const group = L.featureGroup(visiblePlaces.map((p) => p.marker));
+                    map.flyToBounds(group.getBounds().pad(0.3), { duration: 0.6 });
+                }
+            }
+
+            filterButtons.forEach((btn) => {
+                btn.addEventListener('click', () => {
+                    filterButtons.forEach((b) => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    applyFilter(btn.dataset.filter);
+                });
+            });
+
+            // Stato iniziale: tutti i marker visibili
+            applyFilter('tutti');
+        })();
+    </script>
+    <script>
+        (function () {
+            const bar = document.querySelector('.text-block');
+            const stopBefore = document.querySelector('.luoghi-section');
+            if (!bar || !stopBefore) return;
+
+            function update() {
+                const stopY = stopBefore.offsetTop; // punto dove la barra deve fermarsi
+                const barCenterIfFixed = window.scrollY + (window.innerHeight / 2);
+
+                if (barCenterIfFixed >= stopY) {
+                    bar.style.setProperty('--stop-y', stopY + 'px');
+                    bar.classList.add('is-stopped');
+                } else {
+                    bar.classList.remove('is-stopped');
+                }
+            }
+
+            update();
+            window.addEventListener('scroll', update, { passive: true });
+            window.addEventListener('resize', update);
+        })();
+    </script>
+</body>
+
+</html>

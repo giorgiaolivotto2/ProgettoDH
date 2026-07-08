@@ -1,17 +1,614 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<catalogo>
-    <libro id="1">
-        <titolo>Il nome della rosa</titolo>
-        <autore>Umberto Eco</autore>
-        <genere>Romanzo storico</genere>
-        <prezzo>12.99</prezzo>
-        <pubblicazione>1980</pubblicazione>
-    </libro>
-    <libro id="2">
-        <titolo>Cent'anni di solitudine</titolo>
-        <autore>Gabriel García Márquez</autore>
-        <genere>Realismo magico</genere>
-        <prezzo>14.50</prezzo>
-        <pubblicazione>1967</pubblicazione>
-    </libro>
-</catalogo>
+
+<lido:lido xmlns:lido="http://www.lido-schema.org" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:crm="http://www.cidoc-crm.org/cidoc-crm/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:gml="http://www.opengis.net/gml"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:viaf="https://viaf.org/fr"
+  xsi:schemaLocation="http://www.lido-schema.org http://www.lido-schema.org/schema/v1.0/lido-v1.0.xsd">
+
+   <!-- RECID -->
+
+  <lido:lidoRecID
+    lido:type="http://terminology.lido-schema.org/lido00099"
+    lido:source="https://anagrafe.iccu.sbn.it/it/ricerca/dettaglio.html?codice_isil=it-BL0023">
+   https://anagrafe.iccu.sbn.it/it/ricerca/dettaglio.html?codice_isil=it-BL0023/lido-objFVNFD3
+  </lido:lidoRecID>
+
+ <!-- OBJPUBLISHEDID -->
+
+  <lido:objectPublishedID
+      lido:pref="http://terminology.lido-schema.org/lido00169"
+      lido:type="http://terminology.lido-schema.org/lido00099"
+      lido:source="https://catalogo.beniculturali.it/">
+      https://www.lombardiabeniculturali.it/opere-arte/schede/2p100-01374/
+  </lido:objectPublishedID>
+
+  <!-- CATEGORY -->
+
+  <lido:category>
+    <lido:conceptID lido:type="URI" lido:source="AAT">http://vocab.getty.edu/aat/300132254</lido:conceptID>
+    <lido:term xml:lang="it">Munufatto</lido:term>
+    <lido:term xml:lang="en">Human made object</lido:term>
+  </lido:category>
+
+      <!-- DESCRIPTIVE METADATA -->
+
+  <lido:descriptiveMetadata xml:lang="en">
+    
+    <!-- 1 OBJECT  WORK/TYPE -->
+
+    <lido:objectClassificationWrap>
+
+      <!-- Tipo di oggetto -->
+
+      <lido:objectWorkTypeWrap>
+
+        <!-- Per uso dell'oggetto -->
+        <lido:objectWorkType
+          lido:type="http://terminology.lido-schema.org/lido00767">
+          <skos:Concept rdf:about="http://vocab.getty.edu/page/aat/300069413" lido:source="AAT">
+            <skos:prefLabel xml:lang="en">
+              Design drawings
+            </skos:prefLabel>
+          </skos:Concept>
+          <lido:term 
+            lido:pref="http://terminology.lido-schema.org/lido00526"
+            xml:lang="en">
+            Project
+          </lido:term>
+          <lido:term
+            xml:lang="it">
+            Progetto
+          </lido:term>
+        </lido:objectWorkType>
+      </lido:objectWorkTypeWrap>
+    </lido:objectClassificationWrap>
+      
+      <!-- 2 CLASSIFICATION -->
+
+    <lido:classificationWrap>
+
+      <!-- Object genre -->
+      <lido:classification
+          lido:type="http://terminology.lido-schema.org/lido00853">
+          <skos:Concept
+              rdf:about="http://vocab.getty.edu/page/aat/300411641">
+              <skos:prefLabel
+                  xml:lang="en">
+                  Decorative arts(art genre)
+              </skos:prefLabel>
+              <skos:prefLabel
+                  xml:lang="it">
+                  Arti decorative
+              </skos:prefLabel>
+          </skos:Concept>
+          <lido:term
+              lido:addedSearchTerm="yes"
+              rdf:about="https://thes.bncf.firenze.sbn.it/termine.php?id=7479"
+              xml:lang="it">
+              Arti decorative
+          </lido:term>
+          <!-- Display label -->
+          <lido:term
+              lido:pref="http://terminology.lido-schema.org/lido00526"
+              xml:lang="it">
+              Arti Decorative
+          </lido:term>
+      </lido:classification>
+      <!-- Categoria soggetto -->
+      <lido:classification
+          lido:type="http://terminology.lido-schema.org/lido00932">
+          <skos:Concept
+          rdf:about="http://vocab.getty.edu/page/aat/300069413">
+            <skos:prefLabel
+              xml:lang="en">
+              Design drawings
+            </skos:prefLabel>
+          </skos:Concept>
+          <lido:term
+            lido:pref="http://terminology.lido-schema.org/lido00526"
+            xml:lang="it">
+            Design drawing
+          </lido:term>
+      </lido:classification>
+    </lido:classificationWrap>
+    
+    <!-- OBJECT IDENTIFICATION -->
+
+    <lido:objectIdentificationWrap>
+
+      <!-- 3 TITOLO -->
+      <lido:titleWrap>
+        <lido:titleSet
+          lido:pref="http://terminology.lido-schema.org/lido00169">
+          <lido:appellationValue 
+            lido:pref="http://terminology.lido-schema.org/lido00169"
+            xml:lang="it">
+            Disegno del modello 5481
+          </lido:appellationValue>
+          <lido:appellationValue 
+            lido:pref="http://terminology.lido-schema.org/lido00169"
+            xml:lang="it">
+            Design of model 5481
+          </lido:appellationValue>
+        </lido:titleSet>
+      </lido:titleWrap>
+
+      <!-- 4 INSCRIPTION -->
+
+      <lido:inscriptions>
+        <inscriptionTranscription
+          xml:lang="it">
+          M.V.M Cappelin &amp; C. S. A. 
+        </inscriptionTranscription>
+        <inscriptionDescription>
+          <descriptiveNoteValue
+            xml:lang="en">
+            letterheads
+          </descriptiveNoteValue>
+          <sourceDescriptiveNote>
+            Venetian glasses : the Carla Nasci and Ferruccio Franzoia collection / edited by Tiziana Casagrande and Ferruccio Franzoia; p.337.
+          </sourceDescriptiveNote>
+        </inscriptionDescription>
+      </lido:inscriptions>
+
+      <!-- 5 REPOSITORY -->
+        
+      <lido:repositoryWrap>
+        <sourceRepositorySet
+          xml:lang="en">
+          The Nasci-Franzoia collection is located within the Carlo Rizzarda Gallery of Modern Art in Feltre. It is the largest private collection of Muranese glass in the world. The various pieces come from other collections and were accumulated by the married couple Nasci-Franzoia.
+        </sourceRepositorySet>
+      </lido:repositoryWrap>
+
+        <!-- 6 STATE/EDITION -->
+
+
+        <!-- 7 OBJECT DESCRIPTION -->
+        
+      <!-- 8 MESUREMENTS -->
+      <lido:objectMeasurementsWrap>
+        <lido:objectMeasurementsSet>
+      
+          <!-- Display generale -->
+          <lido:displayObjectMeasurements 
+            xml:lang="en">
+            Height x width: 42 x 30 cm
+            </lido:displayObjectMeasurements>
+            <lido:objectMeasurements>
+              <!-- MISURA 1: Altezza -->
+              <lido:measurementsSet>
+                <lido:measurementType>
+                  <skos:Concept 
+                    rdf:about="http://www.wikidata.org/wiki/Q208826">
+                      <skos:prefLabel
+                        xml:lang="en">
+                        height
+                      </skos:prefLabel>
+                  </skos:Concept>
+                </lido:measurementType>
+                <lido:measurementUnit>
+                  <skos:Concept
+                    rdf:about="https://www.wikidata.org/wiki/Q174728">
+                      <skos:prefLabel
+                        xml:lang="en">
+                        centimeter
+                      </skos:prefLabel>
+                  </skos:Concept>
+                </lido:measurementUnit>
+                <lido:measurementValue>
+                  42
+                </lido:measurementValue>
+              </lido:measurementsSet>
+            <!-- MISURA 2: larghezza  -->
+              <lido:measurementsSet>
+                <lido:measurementType>
+                  <skos:Concept 
+                    rdf:about="https://www.wikidata.org/wiki/Q35059">
+                      <skos:prefLabel
+                        xml:lang="en">
+                        widht
+                      </skos:prefLabel>
+                  </skos:Concept>
+                </lido:measurementType>
+                <lido:measurementUnit>
+                  <skos:Concept
+                    rdf:about="https://www.wikidata.org/wiki/Q174728">
+                      <skos:prefLabel
+                        xml:lang="en">
+                        centimeters
+                      </skos:prefLabel>
+                  </skos:Concept>
+                </lido:measurementUnit>
+                <lido:measurementValue>
+                  30
+                </lido:measurementValue>
+              </lido:measurementsSet>
+                
+                <!-- Scala -->
+              <lido:scaleObjectMeasurements>1:1</lido:scaleObjectMeasurements>
+                
+                <!-- Forma -->
+              <lido:shapeObjectMeasurements>Rectangle</lido:shapeObjectMeasurements>
+            </lido:objectMeasurements>
+        </lido:objectMeasurementsSet>
+      </lido:objectMeasurementsWrap>
+      
+      <!--10  EVENT WRAP (Creation/Production) -->
+
+      <lido:eventWrap>
+        <lido:eventSet
+          lido:sortorder="1"
+          mostNotableEvent="1">
+          <lido:displayEvent
+            xml:lang="en">
+            Designed by Vittorio Zecchin while being artistic directot for Cappellin-Venini (1921-1922)
+          </lido:displayEvent>
+          <lido:event>
+            <lido:eventType>
+              <skos:Concept
+              rdf:about="http://terminology.lido-schema.org/lido00012">
+              <skos:prefLabel
+                xml:lang="en">
+                Creation
+              </skos:prefLabel>
+              </skos:Concept>
+            </lido:eventType>
+            <lido:eventActor>
+              <lido:displayActorInRole
+                xml:lang="en">
+                Designer: Vittorio Zecchin (1878-1947)
+              </lido:displayActorInRole>
+              <actorInRole>
+                  <lido:actor
+                    lido:type="http://terminology.lido-schema.org/lido00163">
+                  <lido:actorID
+                    lido:type="http://terminology.lido-schema.org/lido00099">
+                    http://viaf.org/viaf/72322017
+                  </lido:actorID>
+                  <lido:nameActorSet>
+                  <!-- Preferred name -->
+                    <lido:appellationValue
+                      lido:pref="http://terminology.lido-schema.org/lido00169"
+                      xml:lang="it">
+                      Zecchin, Vittorio
+                    </lido:appellationValue>
+                      <!-- Display name -->
+                    <lido:appellationValue
+                      lido:pref="terminology.lido-schema.org/lido00526"
+                      xml:lang="en">
+                      Vittorio Zecchin
+                    </lido:appellationValue>
+                  </lido:nameActorSet>
+                </lido:actor>
+                <lido:roleActor>
+                  <skos:Concept
+                    rdf:about="http://vocab.getty.edu/aat/300025190">
+                    <skos:prefLabel
+                      xml:lang="en">
+                      designers
+                    </skos:prefLabel>
+                  </skos:Concept> 
+                  <!-- Display name -->
+                  <lido:term
+                    lido:pref="http://terminology.lido-schema.org/lido00526"
+                    xml:lang="en">
+                    desiger
+                  </lido:term>
+                </lido:roleActor>
+              </actorInRole>
+            </lido:eventActor>
+            <lido:eventDate>
+              <lido:displayDate xml:lang="en">
+                1921-1922
+              </lido:displayDate>
+              <!-- Estimated date -->
+              <lido:date
+                lido:type="http://terminology.lido-schema.org/lido00529">
+                <lido:earliestDate
+                  lido:type="http://terminology.lido-schema.org/lido00529">
+                  1921
+                </lido:earliestDate>
+                <lido:latestDate
+                  lido:type="http://terminology.lido-schema.org/lido00529">
+                  1922
+                </lido:latestDate>
+              </lido:date>
+            </lido:eventDate>
+            <lido:eventPlace>
+              <lido:displayPlace
+                xml:lang="en">
+                Murano island, Fondamenta dei Vetrai (VE), between 1921 and 1922
+              </lido:displayPlace>
+              <!-- city -->
+              <lido:place
+                lido:politicalentity="https://www.wikidata.org/wiki/Q515">
+                <lido:pladeId
+                  lido:type="http://terminology.lido-schema.org/lido00099">
+                  https://www.wikidata.org/wiki/Q641
+                </lido:pladeId>
+                <lido:namePlaceSet>
+                  <!-- Preferred label -->
+                  <lido:appellationValue
+                      lido:pref="http://terminology.lido-schema.org/lido00169"
+                      xml:lang="en">
+                      Venice
+                  </lido:appellationValue>
+                </lido:namePlaceSet>
+                <lido:gml>
+                  <gml:Point>
+                    <gml:pos>45.4408474, 12.3155151</gml:pos>
+                  </gml:Point>
+                </lido:gml>
+              </lido:place>
+            </lido:eventPlace>
+          </lido:event> 
+        </lido:eventSet>
+      </lido:eventWrap>
+      
+      <!-- Materiale e tecnica -->
+            
+      <lido:objectMaterialsTechWrap>
+       <lido:objectMaterialsTechSet>
+        <lido:displayMaterialsTech
+            xml:lang="en">
+            Graphite pencil on paper
+        </lido:displayMaterialsTech>
+        <lido:materialsTech>
+            <!-- Medium -->
+            <lido:termMaterialsTech
+                lido:type="http://terminology.lido-schema.org/lido00513">
+                    <skos:Concept
+                        rdf:about="http://vocab.getty.edu/page/aat/300022443">
+                            <skos:prefLabel
+                                xml:lang="en">
+                                Graphite pencil
+                            </skos:prefLabel>
+                    </skos:Concept>
+                    <!-- Display label -->
+                    <lido:term
+                        lido:pref="http://terminology.lido-schema.org/lido00526"
+                        xml:lang="en">
+                        Graphite pencil
+                    </lido:term>
+            </lido:termMaterialsTech>
+            <!-- Support -->
+            <lido:termMaterialsTech
+                lido:type="http://terminology.lido-schema.org/lido00514">
+                    <skos:Concept
+                        rdf:about="http://vocab.getty.edu/page/aat/300014157">
+                            <skos:prefLabel
+                                xml:lang="en">
+                                Drawing paper
+                            </skos:prefLabel>
+                    </skos:Concept>
+                    <!--Display label -->
+                    <lido:term
+                        lido:pref="http://terminology.lido-schema.org/lido00526"
+                        xml:lang="en">
+                        Paper
+                    </lido:term>
+            </lido:termMaterialsTech>
+            <!-- Technique -->
+            <lido:termMaterialsTech
+                lido:type="http://terminology.lido-schema.org/lido00131">
+                    <skos:Concept
+                        rdf:about="http://vocab.getty.edu/aat/300069413">
+                            <skos:prefLabel
+                                xml:lang="en">
+                                Design drawings
+                            </skos:prefLabel>
+                    </skos:Concept>
+                    <!-- Display label -->
+                    <lido:term
+                        lido:pref="http://terminology.lido-schema.org/lido00526"
+                        xml:lang="en">
+                         Design drawing
+                    </lido:term>
+                </lido:termMaterialsTech>
+            </lido:materialsTech>
+        </lido:objectMaterialsTechSet>
+      </lido:objectMaterialsTechWrap>
+
+      <!-- OBJECT RELATIONS -->
+
+      <!-- 11 SUBJECT -->
+      <lido:subjectSet>
+        <!-- Description -->
+        <lido:subject
+          lido:type="http://terminology.lido-schema.org/lido00525">
+            <lido:subjectConcept>
+              <skos:Concept
+                rdf:about="https://www.wikidata.org/wiki/Q312476">
+                <skos:prefLabel
+                  xml:lang="en">
+                  Design 
+                </skos:prefLabel>
+              </skos:Concept>
+              <!-- Display label -->
+              <lido:term
+                lido:pref="http://terminology.lido-schema.org/lido00526"
+                xml:lang="en">
+                Design of "Libellula" vase, model 5481
+              </lido:term>
+            </lido:subjectConcept>
+            <lido:subjectConcept>
+              <skos:Concept
+                rdf:about="https://www.wikidata.org/wiki/Q185925">
+                <skos:prefLabel
+                  xml:lang="en">
+                  Graphic design
+                </skos:prefLabel>
+              </skos:Concept>
+              <!-- Display label -->
+              <lido:term
+                lido:pref="http://terminology.lido-schema.org/lido00526"
+                xml:lang="en">
+                Design
+              </lido:term>
+            </lido:subjectConcept>
+        </lido:subject>
+      </lido:subjectSet>
+
+      <!-- 12 RELATED WORKS -->
+      <lido:objectRelationWrap>
+        <lido:relatedWorksWrap>
+          <lido:relatedWorkSet
+            lido:sortorder="1">
+            <lido:displayRelatedWork
+              xml:lang="it">
+            Vaso Libellula, Vittorio Zecchin, 1922
+            </lido:displayRelatedWork>
+            <lido:relatedWork>
+              <lido:object>
+                <lido:objectID
+                  lido:type="http://terminology.lido-schema.org/lido00099"
+                  lido:source="Galleria d'Arte Moderna Carlo Rizzarda">
+                  inv. n. FVNF19 
+                </lido:objectID>
+                <lido:objectNote
+                  xml:lang="en">
+                  Vaso Libellula, Galleria Rizzarda, inv. n. FVNF19 
+                </lido:objectNote>
+              </lido:object>
+            </lido:relatedWork>
+            <lido:relatedWorkRelType>
+              <skos:Concept
+                rdf:about="http://terminology.lido-schema.org/lido00594">
+                  <skos:prefLabel
+                    xml:lang="en">
+                    is design for
+                  </skos:prefLabel>
+              </skos:Concept>
+            </lido:relatedWorkRelType>
+            <lido:sourceRelatedWorkSet>
+              Venetian glasses : the Carla Nasci and Ferruccio Franzoia collection / edited by Tiziana Casagrande and Ferruccio Franzoia; p.337.
+            </lido:sourceRelatedWorkSet>
+          </lido:relatedWorkSet>
+        </lido:relatedWorksWrap>
+      </lido:objectRelationWrap>
+
+    </lido:objectIdentificationWrap>
+
+  </lido:descriptiveMetadata>
+
+  <!-- ADMINISTRATIVE METADATA -->
+
+  <lido:administrativeMetadata xml:lang="en">
+
+  
+    <!-- 13 RIGHTS FOR WORK SET -->
+
+  <rightsWorkWrap>
+    <lido:rightsWorkSet>
+      <lido:rightsType
+        lido:type="http://terminology.lido-schema.org/lido00920">
+        <skos:Concept 
+          rdf:about="http://vocab.getty.edu/aat/300055598">
+          <skos:prefLabel 
+            xml:lang="en">
+            copyright
+          </skos:prefLabel>
+        </skos:Concept>
+      </lido:rightsType>
+      <lido:rightsHolder>
+        <lido:legalBodyID 
+          lido:type="http://terminology.lido-schema.org/lido00099">
+          https://anagrafe.iccu.sbn.it/isil/IT-BL0023
+        </lido:legalBodyID>
+        <lido:legalBodyName>
+          <lido:appellationValue
+            xml:lang="it">
+            Galleria d'Arte Moderna Carlo Rizzarda
+          </lido:appellationValue>
+        </lido:legalBodyName>
+      </lido:rightsHolder>
+    </lido:rightsWorkSet>
+  </rightsWorkWrap>
+  
+    <!-- 14 RECORD SET-->
+
+  <lido:recordWrap>
+    <!-- recordid -->
+    <lido:recordID
+      lido:source=""
+      lido:type="http://terminology.lido-schema.org/lido00100">
+      FVNFD3
+    </lido:recordID>
+    <!-- recordtype -->
+    <lido:recordType>
+      <skos:Concept
+        rdf:about="http://terminology.lido-schema.org/lido00141">
+          <skos:prefLabel
+            xml:lang="en">
+            item-level record
+          </skos:prefLabel>
+      </skos:Concept>
+      <lido:term
+          lido:pref="http://terminology.lido-schema.org/lido00526"
+          xml:lang="en">
+          item
+      </lido:term>
+    </lido:recordType>
+    <!-- recordSource -->
+    <lido:recordSource>
+      <lido:legalBodyID 
+        lido:type="http://terminology.lido-schema.org/lido00099">
+        https://anagrafe.iccu.sbn.it/isil/IT-BL0023
+      </lido:legalBodyID>
+      <lido:legalBodyName>
+        <lido:appellationValue
+          xml:lang="it">
+          Galleria d'Arte Moderna Carlo Rizzarda
+        </lido:appellationValue>
+      </lido:legalBodyName>
+    </lido:recordSource>
+  </lido:recordWrap>
+
+    <!-- 15 RESOURCE SET-->
+
+    <lido:resourceWrap>
+    <lido:resourceSet>
+      <lido:resourceID 
+        lido:type="local">
+        vaso_libellula_FVNFD3.jpg
+      </lido:resourceID>
+      <lido:resourceRepresentation 
+        lido:type="image_full">
+          <lido:linkResource>
+            assets\images\progetto_vaso_libellula.jpg
+          </lido:linkResource>
+      </lido:resourceRepresentation>
+      <lido:resourceType>
+        <lido:conceptID
+         lido:type="URI" lido:source="AAT">
+         http://vocab.getty.edu/aat/300215302
+        </lido:conceptID>
+        <lido:term 
+          xml:lang="en">
+          digital photograph
+        </lido:term>
+      </lido:resourceType>
+      <lido:resourceRelType>
+        <lido:conceptID 
+          lido:type="URI" lido:source="AAT">
+          http://vocab.getty.edu/aat/300215302
+        </lido:conceptID>
+        <lido:term 
+          xml:lang="en">
+          image of object
+        </lido:term>
+      </lido:resourceRelType>
+    </lido:resourceSet>
+  </lido:resourceWrap>
+
+</lido:administrativeMetadata>
+  
+</lido:lido>
