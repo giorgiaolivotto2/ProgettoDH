@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<lido:lido xmlns:lido="http://www.lido-schema.org" 
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+<lido:lido xmlns:lido="http://www.lido-schema.org"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
   xmlns:crm="http://www.cidoc-crm.org/cidoc-crm/"
@@ -41,7 +41,7 @@
       <!-- DESCRIPTIVE METADATA -->
 
   <lido:descriptiveMetadata xml:lang="en">
-    
+
     <!-- 1 OBJECT  WORK/TYPE -->
 
     <lido:objectClassificationWrap>
@@ -58,7 +58,7 @@
               Vases
             </skos:prefLabel>
           </skos:Concept>
-          <lido:term 
+          <lido:term
             lido:pref="http://terminology.lido-schema.org/lido00526"
             xml:lang="en">
             Vases
@@ -76,7 +76,7 @@
               Murano glass
             </skos:prefLabel>
           </skos:Concept>
-          <lido:term 
+          <lido:term
             lido:pref="http://terminology.lido-schema.org/lido00526"
             xml:lang="en">
             Murano glass
@@ -87,8 +87,7 @@
           </lido:term>
         </lido:objectWorkType>
       </lido:objectWorkTypeWrap>
-    </lido:objectClassificationWrap>
-      
+
       <!-- 2 CLASSIFICATION -->
 
     <lido:classificationWrap>
@@ -107,9 +106,9 @@
                   Arti decorative
               </skos:prefLabel>
           </skos:Concept>
+          <lido:conceptID lido:type="URI" lido:source="BNCF">https://thes.bncf.firenze.sbn.it/termine.php?id=7479</lido:conceptID>
           <lido:term
               lido:addedSearchTerm="yes"
-              rdf:about="https://thes.bncf.firenze.sbn.it/termine.php?id=7479"
               xml:lang="it">
               Arti decorative
           </lido:term>
@@ -141,7 +140,8 @@
           </lido:term>
       </lido:classification>
     </lido:classificationWrap>
-    
+    </lido:objectClassificationWrap>
+
     <!-- OBJECT IDENTIFICATION -->
 
     <lido:objectIdentificationWrap>
@@ -150,12 +150,12 @@
       <lido:titleWrap>
         <lido:titleSet
           lido:pref="http://terminology.lido-schema.org/lido00169">
-          <lido:appellationValue 
+          <lido:appellationValue
             lido:pref="http://terminology.lido-schema.org/lido00169"
             xml:lang="it">
             Vaso Libellula
           </lido:appellationValue>
-          <lido:appellationValue 
+          <lido:appellationValue
             lido:pref="http://terminology.lido-schema.org/lido00169"
             xml:lang="it">
             Libellula vase
@@ -165,43 +165,47 @@
 
       <!-- 4 INSCRIPTION -->
 
-      <lido:inscriptions>
-        <inscriptionTranscription
-          xml:lang="it">
-          M.V.M./CAPPELLIN/MURANO
-        </inscriptionTranscription>
-        <inscriptionDescription>
-          <descriptiveNoteValue
+      <lido:inscriptionsWrap>
+        <lido:inscriptions>
+          <lido:inscriptionTranscription
             xml:lang="it">
-            Firma ad acido
-          </descriptiveNoteValue>
-          <sourceDescriptiveNote>
-            Venetian glasses : the Carla Nasci and Ferruccio Franzoia collection / edited by Tiziana Casagrande and Ferruccio Franzoia; p.337.
-          </sourceDescriptiveNote>
-        </inscriptionDescription>
-      </lido:inscriptions>
+            M.V.M./CAPPELLIN/MURANO
+          </lido:inscriptionTranscription>
+          <lido:inscriptionDescription>
+            <lido:descriptiveNoteValue
+              xml:lang="it">
+              Firma ad acido
+            </lido:descriptiveNoteValue>
+            <lido:sourceDescriptiveNote>
+              Venetian glasses : the Carla Nasci and Ferruccio Franzoia collection / edited by Tiziana Casagrande and Ferruccio Franzoia; p.337.
+            </lido:sourceDescriptiveNote>
+          </lido:inscriptionDescription>
+        </lido:inscriptions>
+      </lido:inscriptionsWrap>
 
       <!-- 5 REPOSITORY -->
-        
+
       <lido:repositoryWrap>
-        <sourceRepositorySet
+        <lido:repositorySet>
+          <lido:sourceRepositorySet
           xml:lang="en">
           The Nasci-Franzoia collection is located within the Carlo Rizzarda Gallery of Modern Art in Feltre. It is the largest private collection of Muranese glass in the world. The various pieces come from other collections and were accumulated by the married couple Nasci-Franzoia.
-        </sourceRepositorySet>
+          </lido:sourceRepositorySet>
+        </lido:repositorySet>
       </lido:repositoryWrap>
 
         <!-- 6 STATE/EDITION -->
 
         <!-- 7 OBJECT DESCRIPTION -->
-        
+
       <lido:objectDescriptionWrap>
         <lido:objectDescriptionSet>
-          <lido:descriptiveNoteValue 
+          <lido:descriptiveNoteValue
             xml:lang="it">
             Vaso Libelluda in vetro trasparente color "fumo" con piede a disco, coppa campaniforme e grandi anse laterali alle quali si deve il nome. Superficie legger-mente iridata.
-            Il modello, disegnato da Vittorio Zecchin nel 1921 con i suoi caratteri essenziali di purezza di linee, tra-sparenza e tenue cromia, segna il definitivo distacco dalla produzione precedente. Di questo modello furono proposte, in catalogo, tre diverse varianti di altezza (da cm 14 a 23). Una di queste venne pre-sentata al Salon d'automne di Parigi nel 1922, e l'an-no seguente alla I Biennale di Monza. Anna Venini Diaz de Santillana informa che nel Catalogo blu di Venini il vaso fu erroneamente inserito nel periodo 1925-1930, coincidente con la direzione artistica di Martinuzzi. Corrisponde al n. 1432A.       
+            Il modello, disegnato da Vittorio Zecchin nel 1921 con i suoi caratteri essenziali di purezza di linee, tra-sparenza e tenue cromia, segna il definitivo distacco dalla produzione precedente. Di questo modello furono proposte, in catalogo, tre diverse varianti di altezza (da cm 14 a 23). Una di queste venne pre-sentata al Salon d'automne di Parigi nel 1922, e l'an-no seguente alla I Biennale di Monza. Anna Venini Diaz de Santillana informa che nel Catalogo blu di Venini il vaso fu erroneamente inserito nel periodo 1925-1930, coincidente con la direzione artistica di Martinuzzi. Corrisponde al n. 1432A.
           </lido:descriptiveNoteValue>
-          <lido:descriptiveNoteValue 
+          <lido:descriptiveNoteValue
             xml:lang="en">
             "Libellula" vase in transparent, smoke-colored glass with a disc-shaped base, a bell-shaped cup, and large lateral handles, giving it its name. The surface is slightly iridescent.
             The model, designed by Vittorio Zecchin in 1921, with its essential characteristics of pure lines, transparency, and pale hues, marks a definitive departure from previous production. This model was proposed in the catalog in three different heights (from 14 to 23 cm). One of these was presented at the Salon d'Automne in Paris in 1922, and the following year at the first Monza Biennale. Anna Venini Diaz de Santillana reports that the vase was mistakenly included in the Venini Blue Catalogue in the period 1925-1930, coinciding with Martinuzzi's artistic direction. It corresponds to no. 1432A.
@@ -211,11 +215,11 @@
           </lido:sourceDescriptiveNote>
         </lido:objectDescriptionSet>
       </lido:objectDescriptionWrap>
-        
+
       <!-- 8 MESUREMENTS -->
       <lido:objectMeasurementsWrap>
         <lido:objectMeasurementsSet>
-      
+
           <!-- Display generale -->
           <lido:displayObjectMeasurements xml:lang="en">h cm 20 ø cm 18,5 x 16 x 29</lido:displayObjectMeasurements>
             <lido:objectMeasurements>
@@ -223,7 +227,7 @@
               <!-- MISURA 1: Altezza -->
               <lido:measurementsSet>
                 <lido:measurementType>
-                  <skos:Concept 
+                  <skos:Concept
                     rdf:about="http://www.wikidata.org/wiki/Q208826">
                       <skos:prefLabel
                         xml:lang="en">
@@ -248,7 +252,7 @@
                 <!-- MISURA 2: diametro  -->
               <lido:measurementsSet>
                 <lido:measurementType>
-                  <skos:Concept 
+                  <skos:Concept
                     rdf:about="https://www.wikidata.org/wiki/Q37221">
                       <skos:prefLabel
                         xml:lang="en">
@@ -269,22 +273,127 @@
                   29
                 </lido:measurementValue>
               </lido:measurementsSet>
-                
+
+              <!-- Forma -->
+              <lido:shapeMeasurements>Dragonfly</lido:shapeMeasurements>
+
                 <!-- Scala -->
-              <lido:scaleObjectMeasurements>1:1</lido:scaleObjectMeasurements>
-                
-                <!-- Forma -->
-              <lido:shapeObjectMeasurements>Dragonfly</lido:shapeObjectMeasurements>
+              <lido:scaleMeasurements>1:1</lido:scaleMeasurements>
             </lido:objectMeasurements>
         </lido:objectMeasurementsSet>
       </lido:objectMeasurementsWrap>
-      
+
+
+      <lido:objectMaterialsTechWrap>
+        <lido:objectMaterialsTechSet>
+          <lido:displayMaterialsTech
+             xml:lang="it">
+             vaso in vetro di murano
+          </lido:displayMaterialsTech>
+          <lido:displayMaterialsTech
+             xml:lang="en">murano glass vase
+          </lido:displayMaterialsTech>
+          <lido:materialsTech>
+                <!-- Materiale -->
+            <lido:termMaterialsTech
+              lido:type="http://terminology.lido-schema.org/lido00132">
+              <skos:Concept
+                rdf:about="http://vocab.getty.edu/page/aat/300380561">
+                <skos:prefLabel
+                  xml:lang="en">
+                  Murano Glass (glass)
+                </skos:prefLabel>
+              </skos:Concept>
+              <lido:term
+                lido:addedSearchTerm="yes"
+                xml:lang="it">
+                Vetro muranese
+              </lido:term>
+              <!-- Display label -->
+              <lido:term
+                lido:pref="http://terminology.lido-schema.org/lido00526"
+                xml:lang="en">
+                Murano Glass
+              </lido:term>
+            </lido:termMaterialsTech>
+            <!-- Tecniche -->
+            <lido:termMaterialsTech
+              lido:type="http://terminology.lido-schema.org/lido00131">
+              <skos:Concept
+              rdf:about="http://vocab.getty.edu/page/aat/300233433">
+                <skos:prefLabel
+                  xml:lang="en">
+                  mold-blown glass
+                </skos:prefLabel>
+              </skos:Concept>
+              <lido:term
+                lido:addedSearchTerm="yes"
+                xml:lang="it">
+                vetro soffiato in stampo
+              </lido:term>
+              <!-- Display label -->
+              <lido:term
+                lido:pref="http://terminology.lido-schema.org/lido00526"
+                xml:lang="en">
+                mold-blown glass
+              </lido:term>
+            </lido:termMaterialsTech>
+            <lido:termMaterialsTech
+                lido:type="http://terminology.lido-schema.org/lido00131">
+              <skos:Concept
+                rdf:about="http://vocab.getty.edu/page/aat/300263723">
+                <skos:prefLabel
+                  xml:lang="en">
+                  Pâte de verre (glass)
+                </skos:prefLabel>
+              </skos:Concept>
+              <lido:term
+                lido:addedSearchTerm="yes"
+                xml:lang="it">
+                Pasta vitrea
+              </lido:term>
+              <!-- Display label -->
+              <lido:term
+                lido:pref="http://terminology.lido-schema.org/lido00526"
+                xml:lang="en">
+                Pâte de verre
+              </lido:term>
+            </lido:termMaterialsTech>
+            <lido:termMaterialsTech
+              lido:type="http://terminology.lido-schema.org/lido00131">
+              <skos:Concept
+                rdf:about="http://vocab.getty.edu/page/aat/300380332">
+                  <skos:prefLabel
+                    xml:lang="en">
+                    Colored glass
+                  </skos:prefLabel>
+              </skos:Concept>
+              <lido:term
+                lido:addedSearchTerm="yes"
+                xml:lang="it">
+                Vetro colorato
+              </lido:term>
+              <!-- Display label -->
+              <lido:term
+                lido:pref="http://terminology.lido-schema.org/lido00526"
+                xml:lang="en">
+                Colored glass
+              </lido:term>
+            </lido:termMaterialsTech>
+          </lido:materialsTech>
+       </lido:objectMaterialsTechSet>
+      </lido:objectMaterialsTechWrap>
+
+    </lido:objectIdentificationWrap>
+
+
+
       <!--10  EVENT WRAP (Creation/Production) -->
 
       <lido:eventWrap>
         <lido:eventSet
           lido:sortorder="1"
-          mostNotableEvent="1">
+          lido:mostNotableEvent="1">
           <lido:displayEvent
             xml:lang="en">
             Designed by Vittorio Zecchin while being artistic directot for Cappellin-Venini (1921-1922)
@@ -304,7 +413,7 @@
                 xml:lang="en">
                 Designer: Vittorio Zecchin (1878-1947)
               </lido:displayActorInRole>
-              <actorInRole>
+              <lido:actorInRole>
                   <lido:actor
                     lido:type="http://terminology.lido-schema.org/lido00163">
                   <lido:actorID
@@ -333,7 +442,7 @@
                       xml:lang="en">
                       designers
                     </skos:prefLabel>
-                  </skos:Concept> 
+                  </skos:Concept>
                   <!-- Display name -->
                   <lido:term
                     lido:pref="http://terminology.lido-schema.org/lido00526"
@@ -341,15 +450,14 @@
                     desiger
                   </lido:term>
                 </lido:roleActor>
-              </actorInRole>
+              </lido:actorInRole>
             </lido:eventActor>
             <lido:eventDate>
               <lido:displayDate xml:lang="en">
                 1921-1922
               </lido:displayDate>
               <!-- Estimated date -->
-              <lido:date
-                lido:type="http://terminology.lido-schema.org/lido00529">
+              <lido:date>
                 <lido:earliestDate
                   lido:type="http://terminology.lido-schema.org/lido00529">
                   1921
@@ -367,11 +475,11 @@
               </lido:displayPlace>
               <!-- city -->
               <lido:place
-                lido:politicalentity="https://www.wikidata.org/wiki/Q515">
-                <lido:pladeId
+                lido:politicalEntity="https://www.wikidata.org/wiki/Q515">
+                <lido:placeID
                   lido:type="http://terminology.lido-schema.org/lido00099">
                   https://www.wikidata.org/wiki/Q641
-                </lido:pladeId>
+                </lido:placeID>
                 <lido:namePlaceSet>
                   <!-- Preferred label -->
                   <lido:appellationValue
@@ -387,11 +495,11 @@
                 </lido:gml>
               </lido:place>
             </lido:eventPlace>
-          </lido:event> 
+          </lido:event>
         </lido:eventSet>
         <lido:eventSet
           lido:sortorder="2"
-          mostNotableEvent="1">
+          lido:mostNotableEvent="1">
           <lido:displayEvent
             xml:lang="en">
             Produced by Cappellin-Venini and later by M.V.M. Cappellin and V.S.M. Venini from 1921 to 1926
@@ -411,7 +519,7 @@
                 xml:lang="en">
                 Designer: Vittorio Zecchin (1878-1947)
               </lido:displayActorInRole>
-              <actorInRole>
+              <lido:actorInRole>
                   <lido:actor
                     lido:type="http://terminology.lido-schema.org/lido00413">
                   <lido:actorID
@@ -440,7 +548,7 @@
                       xml:lang="en">
                       design firms
                     </skos:prefLabel>
-                  </skos:Concept> 
+                  </skos:Concept>
                   <!-- Display name -->
                   <lido:term
                     lido:pref="http://terminology.lido-schema.org/lido00526"
@@ -448,15 +556,14 @@
                     design firm
                   </lido:term>
                 </lido:roleActor>
-              </actorInRole>
+              </lido:actorInRole>
             </lido:eventActor>
             <lido:eventDate>
               <lido:displayDate xml:lang="en">
                 1921-1926
               </lido:displayDate>
               <!-- Estimated date -->
-              <lido:date
-                lido:type="http://terminology.lido-schema.org/lido00529">
+              <lido:date>
                 <lido:earliestDate
                   lido:type="http://terminology.lido-schema.org/lido00529">
                   1921
@@ -475,10 +582,10 @@
               <!-- place -->
               <lido:place
                 lido:geographicalEntity="https://www.wikidata.org/wiki/Q23442">
-                <lido:pladeId
+                <lido:placeID
                   lido:type="http://terminology.lido-schema.org/lido00099">
                   https://www.wikidata.org/wiki/Q52437
-                </lido:pladeId>
+                </lido:placeID>
                 <lido:namePlaceSet>
                   <!-- Preferred label -->
                   <lido:appellationValue
@@ -494,11 +601,11 @@
                 </lido:gml>
               </lido:place>
             </lido:eventPlace>
-          </lido:event> 
-        </lido:eventSet>    
+          </lido:event>
+        </lido:eventSet>
         <lido:eventSet
           lido:sortorder="3"
-          mostNotableEvent="1">
+          lido:mostNotableEvent="1">
           <lido:displayEvent
             xml:lang="en">
             Probably 1926
@@ -518,7 +625,7 @@
                 xml:lang="en">
                 Crafted by unknown glass maker
               </lido:displayActorInRole>
-              <actorInRole>
+              <lido:actorInRole>
                   <lido:actor
                     lido:type="http://terminology.lido-schema.org/lido00413">
                   <lido:nameActorSet>
@@ -543,7 +650,7 @@
                       xml:lang="en">
                       design firms
                     </skos:prefLabel>
-                  </skos:Concept> 
+                  </skos:Concept>
                   <!-- Display name -->
                   <lido:term
                     lido:pref="http://terminology.lido-schema.org/lido00526"
@@ -551,15 +658,14 @@
                     design firm
                   </lido:term>
                 </lido:roleActor>
-              </actorInRole>
+              </lido:actorInRole>
             </lido:eventActor>
             <lido:eventDate>
               <lido:displayDate xml:lang="en">
                 1921-1926
               </lido:displayDate>
               <!-- Estimated date -->
-              <lido:date
-                lido:type="http://terminology.lido-schema.org/lido00529">
+              <lido:date>
                 <lido:earliestDate
                   lido:type="http://terminology.lido-schema.org/lido00529">
                   1921
@@ -578,10 +684,10 @@
               <!-- place -->
               <lido:place
                 lido:geographicalEntity="https://www.wikidata.org/wiki/Q23442">
-                <lido:pladeId
+                <lido:placeID
                   lido:type="http://terminology.lido-schema.org/lido00099">
                   https://www.wikidata.org/wiki/Q52437
-                </lido:pladeId>
+                </lido:placeID>
                 <lido:namePlaceSet>
                   <!-- Preferred label -->
                   <lido:appellationValue
@@ -597,116 +703,16 @@
                 </lido:gml>
               </lido:place>
             </lido:eventPlace>
-          </lido:event> 
+          </lido:event>
         </lido:eventSet>
       </lido:eventWrap>
-      
-      <!-- Materiale e tecnica -->
-            
-      <lido:objectMaterialsTechWrap>
-        <lido:objectMaterialsTechSet>
-          <lido:displayMaterialsTech
-             xml:lang="it">
-             vaso in vetro di murano
-          </lido:displayMaterialsTech>
-          <lido:displayMaterialsTech 
-             xml:lang="en">murano glass vase
-          </lido:displayMaterialsTech>
-          <lido:materialsTech>
-                <!-- Materiale -->
-            <lido:termMaterialsTech 
-              lido:type="http://terminology.lido-schema.org/lido00132">
-              <skos:Concept
-                rdf:about="http://vocab.getty.edu/page/aat/300380561">
-                <skos:prefLabel
-                  xml:lang="en">
-                  Murano Glass (glass)
-                </skos:prefLabel>
-              </skos:Concept>
-              <lido:term 
-                lido:addedSearchTerm="yes" 
-                xml:lang="it">
-                Vetro muranese
-              </lido:term>
-              <!-- Display label -->
-              <lido:term
-                lido:pref="http://terminology.lido-schema.org/lido00526"
-                xml:lang="en">
-                Murano Glass
-              </lido:term>
-            </lido:termMaterialsTech>
-            <!-- Tecniche -->
-            <lido:termMaterialsTech 
-              lido:type="http://terminology.lido-schema.org/lido00131">
-              <skos:Concept
-              rdf:about="http://vocab.getty.edu/page/aat/300233433">
-                <skos:prefLabel
-                  xml:lang="en">
-                  mold-blown glass
-                </skos:prefLabel>
-              </skos:Concept>
-              <lido:term 
-                lido:addedSearchTerm="yes" 
-                xml:lang="it">
-                vetro soffiato in stampo
-              </lido:term>
-              <!-- Display label -->
-              <lido:term
-                lido:pref="http://terminology.lido-schema.org/lido00526"
-                xml:lang="en">
-                mold-blown glass
-              </lido:term>
-            </lido:termMaterialsTech>
-            <lido:termMaterialsTech 
-                lido:type="http://terminology.lido-schema.org/lido00131">
-              <skos:Concept
-                rdf:about="http://vocab.getty.edu/page/aat/300263723">
-                <skos:prefLabel
-                  xml:lang="en">
-                  Pâte de verre (glass)
-                </skos:prefLabel>
-              </skos:Concept>
-              <lido:term 
-                lido:addedSearchTerm="yes" 
-                xml:lang="it">
-                Pasta vitrea
-              </lido:term>
-              <!-- Display label -->
-              <lido:term
-                lido:pref="http://terminology.lido-schema.org/lido00526"
-                xml:lang="en">
-                Pâte de verre
-              </lido:term>
-            </lido:termMaterialsTech>
-            <lido:termMaterialsTech 
-              lido:type="http://terminology.lido-schema.org/lido00131">
-              <skos:Concept
-                rdf:about="http://vocab.getty.edu/page/aat/300380332">
-                  <skos:prefLabel
-                    xml:lang="en">
-                    Colored glass
-                  </skos:prefLabel>
-              </skos:Concept>
-              <lido:term 
-                lido:addedSearchTerm="yes" 
-                xml:lang="it">
-                Vetro colorato
-              </lido:term>
-              <!-- Display label -->
-              <lido:term
-                lido:pref="http://terminology.lido-schema.org/lido00526"
-                xml:lang="en">
-                Colored glass
-              </lido:term>
-            </lido:termMaterialsTech>
-          </lido:materialsTech>
-       </lido:objectMaterialsTechSet>
-      </lido:objectMaterialsTechWrap>
 
       <!-- OBJECT RELATIONS -->
 
+      <lido:objectRelationWrap>
 
       <!-- 11 SUBJECT -->
+      <lido:subjectWrap>
       <lido:subjectSet>
         <!-- Description -->
         <lido:subject
@@ -743,9 +749,9 @@
             </lido:subjectConcept>
         </lido:subject>
       </lido:subjectSet>
+      </lido:subjectWrap>
 
       <!-- 12 RELATED WORKS -->
-      <lido:objectRelationWrap>
         <lido:relatedWorksWrap>
           <lido:relatedWorkSet
             lido:sortorder="1">
@@ -758,11 +764,11 @@
                 <lido:objectID
                   lido:type="http://terminology.lido-schema.org/lido00099"
                   lido:source="Galleria d'Arte Moderna Carlo Rizzarda">
-                  inv. n. FVNFD3 
+                  inv. n. FVNFD3
                 </lido:objectID>
                 <lido:objectNote
                   xml:lang="en">
-                  Disegno del modello 5481, Galleria Rizzarda, inv. n. FVNFD3 
+                  Disegno del modello 5481, Galleria Rizzarda, inv. n. FVNFD3
                 </lido:objectNote>
               </lido:object>
             </lido:relatedWork>
@@ -782,30 +788,28 @@
         </lido:relatedWorksWrap>
       </lido:objectRelationWrap>
 
-    </lido:objectIdentificationWrap>
-
   </lido:descriptiveMetadata>
 
   <!-- ADMINISTRATIVE METADATA -->
 
   <lido:administrativeMetadata xml:lang="en">
-  
+
     <!-- 13 RIGHTS FOR WORK SET -->
 
-  <rightsWorkWrap>
+  <lido:rightsWorkWrap>
     <lido:rightsWorkSet>
       <lido:rightsType
         lido:type="http://terminology.lido-schema.org/lido00920">
-        <skos:Concept 
+        <skos:Concept
           rdf:about="http://vocab.getty.edu/aat/300055598">
-          <skos:prefLabel 
+          <skos:prefLabel
             xml:lang="en">
             copyright
           </skos:prefLabel>
         </skos:Concept>
       </lido:rightsType>
       <lido:rightsHolder>
-        <lido:legalBodyID 
+        <lido:legalBodyID
           lido:type="http://terminology.lido-schema.org/lido00099">
           https://anagrafe.iccu.sbn.it/isil/IT-BL0023
         </lido:legalBodyID>
@@ -817,8 +821,8 @@
         </lido:legalBodyName>
       </lido:rightsHolder>
     </lido:rightsWorkSet>
-  </rightsWorkWrap>
-  
+  </lido:rightsWorkWrap>
+
     <!-- 14 RECORD SET-->
 
   <lido:recordWrap>
@@ -845,7 +849,7 @@
     </lido:recordType>
     <!-- recordSource -->
     <lido:recordSource>
-      <lido:legalBodyID 
+      <lido:legalBodyID
         lido:type="http://terminology.lido-schema.org/lido00099">
         https://anagrafe.iccu.sbn.it/isil/IT-BL0023
       </lido:legalBodyID>
@@ -862,11 +866,11 @@
 
   <lido:resourceWrap>
     <lido:resourceSet>
-      <lido:resourceID 
+      <lido:resourceID
         lido:type="local">
         vaso_libellula_FVNF19.jpg
       </lido:resourceID>
-      <lido:resourceRepresentation 
+      <lido:resourceRepresentation
         lido:type="image_full">
           <lido:linkResource>
             assets\images\vaso_libellula.jpg
@@ -877,17 +881,17 @@
          lido:type="URI" lido:source="AAT">
          http://vocab.getty.edu/aat/300215302
         </lido:conceptID>
-        <lido:term 
+        <lido:term
           xml:lang="en">
           digital photograph
         </lido:term>
       </lido:resourceType>
       <lido:resourceRelType>
-        <lido:conceptID 
+        <lido:conceptID
           lido:type="URI" lido:source="AAT">
           http://vocab.getty.edu/aat/300215302
         </lido:conceptID>
-        <lido:term 
+        <lido:term
           xml:lang="en">
           image of object
         </lido:term>
@@ -896,5 +900,5 @@
   </lido:resourceWrap>
 
 </lido:administrativeMetadata>
-  
+
 </lido:lido>

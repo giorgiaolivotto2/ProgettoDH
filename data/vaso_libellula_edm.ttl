@@ -1,0 +1,154 @@
+@prefix edm:      <http://www.europeana.eu/schemas/edm/> .
+@prefix ore:      <http://www.openarchives.org/ore/terms/> .
+@prefix dc:       <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix skos:     <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf:     <http://xmlns.com/foaf/0.1/> .
+@prefix wgs84:    <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+
+# ------------------------------------------------------------------
+# NOTA: il record LIDO di partenza non fornisce URI dereferenziabili
+# propri per l'oggetto, gli agenti o i luoghi (solo URL di pagine di
+# catalogo). Per questa mappatura EDM si conia quindi un namespace
+# segnaposto (https://data.example.org/...), da sostituire con gli
+# URI reali dell'istituzione/aggregatore in un contesto di produzione.
+# ------------------------------------------------------------------
+@base <https://data.example.org/museum/FVNF19/> .
+
+
+# ====================================================================
+# 1. PROVIDED CHO — l'oggetto culturale in sé
+# ====================================================================
+
+<cho> a edm:ProvidedCHO ;
+
+  dc:identifier "FVNF19", "https://anagrafe.iccu.sbn.it/it/ricerca/dettaglio.html?codice_isil=it-BL0023/lido-objFVNF19" ;
+
+  dc:title "Vaso Libellula"@it, "Libellula vase"@en ;
+
+  dc:description
+    "Vaso Libellula in vetro trasparente color \"fumo\" con piede a disco, coppa campaniforme e grandi anse laterali alle quali si deve il nome. Superficie leggermente iridata. Il modello, disegnato da Vittorio Zecchin nel 1921, segna il definitivo distacco dalla produzione precedente. Corrisponde al n. 1432A."@it,
+    "\"Libellula\" vase in transparent, smoke-colored glass with a disc-shaped base, a bell-shaped cup, and large lateral handles, giving it its name. The surface is slightly iridescent. The model, designed by Vittorio Zecchin in 1921, marks a definitive departure from previous production. It corresponds to no. 1432A."@en ;
+
+  # Tipo di oggetto — riuso diretto del concetto Getty AAT già presente nel LIDO
+  dc:type <http://vocab.getty.edu/page/aat/300132254> ;
+  dc:type "vaso"@it, "vase"@en ;
+
+  # Genere / categoria (arti decorative)
+  dcterms:type <http://vocab.getty.edu/page/aat/300411641> ;
+
+  # Materiali e tecniche — riuso dei concetti Getty AAT già linkati nel LIDO
+  dcterms:medium
+    <http://vocab.getty.edu/page/aat/300380561> ,   # Murano glass
+    <http://vocab.getty.edu/page/aat/300233433> ,   # mold-blown glass
+    <http://vocab.getty.edu/page/aat/300263723> ,   # Pâte de verre
+    <http://vocab.getty.edu/page/aat/300380332> ;   # Colored glass
+
+  # Soggetto — riuso dei concetti Wikidata già linkati nel LIDO
+  dc:subject
+    <https://www.wikidata.org/wiki/Q312476> ,       # Dragonfly
+    <https://www.wikidata.org/wiki/Q987767> ;        # Container
+
+  # Misure — EDM non ha una struttura ricca per le misure quanto LIDO;
+  # si usa dcterms:extent come stringa descrittiva (perdita di struttura
+  # rispetto ai measurementsSet distinti del LIDO, vedi nota finale)
+  dcterms:extent "h cm 20, ø cm 18,5 x 16 x 29"@en ;
+
+  # Creazione / produzione
+  dc:creator <agent/zecchin> ;
+  dcterms:contributor <agent/mvm-cappellin> ;
+  dcterms:created <timespan/1921-1926> ;
+  dcterms:spatial <place/murano> ;
+
+  # Opera correlata (disegno del modello) ("has design" nel LIDO)
+  dcterms:relation <../FVNFD3/cho> ;
+
+  # Collocazione attuale / provenienza
+  edm:currentLocation "Galleria d'Arte Moderna Carlo Rizzarda, Feltre"@it ;
+  dcterms:provenance "Collezione Nasci-Franzoia, conservata presso la Galleria d'Arte Moderna Carlo Rizzarda, Feltre; la più grande collezione privata al mondo di vetro muranese."@en ;
+
+  dc:rights "copyright"@en ;
+  dcterms:rights <http://vocab.getty.edu/aat/300055598> .
+
+
+# Iscrizione fisica (M.V.M./CAPPELLIN/MURANO) — modellata come nota separata
+<cho> dc:description "Iscrizione (firma ad acido): \"M.V.M./CAPPELLIN/MURANO\""@it .
+
+
+# ====================================================================
+# 2. AGENTS
+# ====================================================================
+
+<agent/zecchin> a edm:Agent ;
+  skos:prefLabel "Vittorio Zecchin"@en ;
+  owl:sameAs <http://viaf.org/viaf/72322017> ;
+  edm:begin "1878"^^xsd:gYear ;
+  edm:end "1947"^^xsd:gYear .
+
+<agent/mvm-cappellin> a edm:Agent ;
+  skos:prefLabel "Maestri Vetrai Muranesi Cappellin e C., Murano"@it,
+                 "MVM Cappellin"@en ;
+  owl:sameAs <http://viaf.org/viaf/126497749> ;
+  dcterms:type <http://vocab.getty.edu/page/aat/300386273> .  # design firms
+
+
+# ====================================================================
+# 3. PLACES
+# ====================================================================
+
+<place/venice> a edm:Place ;
+  skos:prefLabel "Venice"@en ;
+  owl:sameAs <https://www.wikidata.org/wiki/Q641> ;
+  wgs84:lat "45.4408474"^^xsd:double ;
+  wgs84:long "12.3155151"^^xsd:double .
+
+<place/murano> a edm:Place ;
+  skos:prefLabel "Murano"@en ;
+  owl:sameAs <https://www.wikidata.org/wiki/Q52437> ;
+  dcterms:isPartOf <https://www.wikidata.org/wiki/Q23442> ; # geographicalEntity (Venezia/Veneto)
+  wgs84:lat "45.4575"^^xsd:double ;
+  wgs84:long "12.353611"^^xsd:double .
+
+
+# ====================================================================
+# 4. TIMESPAN
+# ====================================================================
+
+<timespan/1921-1926> a edm:TimeSpan ;
+  skos:prefLabel "1921-1926"@en ;
+  edm:begin "1921"^^xsd:gYear ;
+  edm:end "1926"^^xsd:gYear .
+
+
+# ====================================================================
+# 5. WEB RESOURCE (immagine)
+# ====================================================================
+# NOTA: il lido:linkResource originale è un percorso locale
+# ("assets\images\vaso_libellula.jpg"), non un URL pubblico
+# risolvibile. Qui viene mantenuto come identificatore, ma andrebbe
+# sostituito con l'URL pubblico reale dell'immagine per un uso EDM
+# effettivo (Europeana richiede risorse dereferenziabili).
+
+<image> a edm:WebResource ;
+  dc:format "image/jpeg" ;
+  dc:identifier "assets/images/vaso_libellula.jpg" ;
+  dc:type <http://vocab.getty.edu/aat/300215302> .  # digital photograph
+
+
+# ====================================================================
+# 6. ORE AGGREGATION — collega CHO, risorse web, provider e diritti
+# ====================================================================
+
+<aggregation> a ore:Aggregation ;
+  edm:aggregatedCHO <cho> ;
+  edm:isShownBy <image> ;
+  edm:object <image> ;
+  edm:dataProvider "Galleria d'Arte Moderna Carlo Rizzarda"@it ;
+  edm:provider "ICCU - Istituto Centrale per il Catalogo Unico"@it ;
+  edm:rights <http://rightsstatements.org/vocab/InC/1.0/> ;
+  dc:identifier "IT-BL0023" ;
+  edm:isShownAt <https://anagrafe.iccu.sbn.it/it/ricerca/dettaglio.html?codice_isil=it-BL0023/lido-objFVNF19> .

@@ -1,55 +1,55 @@
 /* =========================================================
    D'Annunzio e il Dèco — Stylesheet
-   Palette: nero profondo, oro vecchio, avorio, verde smeraldo
+   Palette: tortora e avorio
    ========================================================= */
 
 :root {
-  --deco-black: #2e1a1a;          /* bordeaux molto scuro */
-  --deco-black-soft: #3d2323;     /* bordeaux morbido */
-  --deco-gold: #b07080;           /* rosa antico principale */
-  --deco-gold-light: #e8c4c0;     /* rosa cipria chiaro */
-  --deco-ivory: #faf0ef;          /* bianco rosato caldo */
-  --deco-emerald: #7a3e4e;        /* rosa scuro/prugna come accento */
-  --deco-burgundy: #5e2a35;
-  --deco-line: rgba(176, 112, 128, 0.35);
+  --deco-scuro: #5e3e31;          /* terracotta scuro */
+  --deco-scuro-soft: #724c3b;     /* terracotta morbido */
+  --deco-tortora: #c1b2a4;           /* tortora neutro (bordi, linee) */
+  --deco-tortora-light: #ded5cc;     /* tortora chiaro */
+  --deco-cipria: #f1ece6;          /* avorio caldo */
+  --deco-bruno: #74593e;        /* bruno (accento scuro, link) */
+  --deco-accento: #e1c3a7;      /* accento chiaro (su sfondo scuro: etichette, bordi, evidenze) */
+  --deco-line: rgba(193, 178, 164, 0.35);
 
-  --font-display: "Cinzel Decorative", "Cinzel", serif;
-  --font-heading: "Cinzel", serif;
-  --font-body: "EB Garamond", Georgia, serif;
-  --font-utility: "Montserrat", sans-serif;
+  --font-display: "Lora", serif;
+  --font-heading: "Lora", serif;
+  --font-body: "Lora", serif;
+  --font-utility: "Lora", serif;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;500;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Lora:wght@400;500&family=Montserrat:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap");
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: var(--deco-ivory);
-  color: var(--deco-black);
+  background-color: var(--deco-cipria);
+  color: var(--deco-scuro);
   font-family: var(--font-body);
   font-size: 1.05rem;
 }
 
 a {
-  color: var(--deco-emerald);
+  color: var(--deco-bruno);
 }
 
 a:hover {
-  color: var(--deco-gold);
+  color: var(--deco-scuro);
 }
 
 /* ---------- Navbar ---------- */
 .navbar.bg-dark {
-  background-color: var(--deco-black) !important;
-  border-bottom: 2px solid var(--deco-gold) !important;
+  background-color: var(--deco-scuro) !important;
+  border-bottom: 2px solid var(--deco-accento) !important;
 }
 
 .navbar-brand {
   font-family: var(--font-display);
   letter-spacing: 0.08em;
-  color: var(--deco-gold-light) !important;
+  color: var(--deco-tortora-light) !important;
   font-size: 1.3rem;
 }
 
@@ -58,7 +58,7 @@ a:hover {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   font-size: 0.82rem;
-  color: var(--deco-ivory) !important;
+  color: var(--deco-cipria) !important;
   position: relative;
   padding-bottom: 2px;
 }
@@ -70,7 +70,7 @@ a:hover {
   bottom: -2px;
   width: 0;
   height: 1px;
-  background: var(--deco-gold);
+  background: var(--deco-accento);
   transition: width 0.25s ease;
 }
 
@@ -81,23 +81,23 @@ a:hover {
 
 .navbar .nav-link.active,
 .navbar .nav-link:hover {
-  color: var(--deco-gold-light) !important;
+  color: var(--deco-tortora-light) !important;
 }
 
 .navbar .dropdown-menu {
-  background-color: var(--deco-black-soft);
+  background-color: var(--deco-scuro-soft);
   border: 1px solid var(--deco-line);
 }
 
 .navbar .dropdown-item {
-  color: var(--deco-ivory);
+  color: var(--deco-cipria);
   font-family: var(--font-utility);
   font-size: 0.85rem;
 }
 
 .navbar .dropdown-item:hover {
-  background-color: var(--deco-emerald);
-  color: var(--deco-gold-light);
+  background-color: var(--deco-bruno);
+  color: var(--deco-tortora-light);
 }
 
 .navbar .form-control,
@@ -109,13 +109,63 @@ a:hover {
 }
 
 .navbar .btn-outline-success {
-  color: var(--deco-gold-light);
-  border-color: var(--deco-gold);
+  color: var(--deco-tortora-light);
+  border-color: var(--deco-accento);
 }
 
 .navbar .btn-outline-success:hover {
-  background-color: var(--deco-gold);
-  color: var(--deco-black);
+  background-color: var(--deco-accento);
+  color: var(--deco-scuro);
+}
+
+/* ---------- Bottoni Bootstrap (uniformati al tema) ---------- */
+.btn-primary {
+  --bs-btn-bg: var(--deco-scuro);
+  --bs-btn-border-color: var(--deco-scuro);
+  --bs-btn-color: var(--deco-cipria);
+  --bs-btn-hover-bg: var(--deco-accento);
+  --bs-btn-hover-border-color: var(--deco-accento);
+  --bs-btn-hover-color: var(--deco-scuro);
+  --bs-btn-active-bg: var(--deco-bruno);
+  --bs-btn-active-border-color: var(--deco-bruno);
+  --bs-btn-active-color: var(--deco-cipria);
+  font-family: var(--font-utility);
+  letter-spacing: 0.04em;
+}
+
+.btn-outline-primary {
+  --bs-btn-bg: var(--deco-scuro);
+  --bs-btn-border-color: var(--deco-scuro);
+  --bs-btn-color: var(--deco-cipria);
+  --bs-btn-hover-bg: var(--deco-accento);
+  --bs-btn-hover-border-color: var(--deco-accento);
+  --bs-btn-hover-color: var(--deco-scuro);
+  --bs-btn-active-bg: var(--deco-bruno);
+  --bs-btn-active-border-color: var(--deco-bruno);
+  --bs-btn-active-color: var(--deco-cipria);
+  font-family: var(--font-utility);
+  letter-spacing: 0.04em;
+}
+
+/* ---------- Card Bootstrap (uniformata al tema) ---------- */
+.card {
+  --bs-card-bg: var(--deco-scuro-soft);
+  --bs-card-border-color: var(--deco-line);
+  --bs-card-border-radius: 0;
+  --bs-card-inner-border-radius: 0;
+}
+
+.card-title {
+  font-family: var(--font-heading);
+  color: var(--deco-cipria);
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+}
+
+.card-text {
+  font-family: var(--font-body);
+  color: rgba(241, 236, 230, 0.75);
+  font-size: 0.9rem;
 }
 
 /* ---------- Hero image / title block ---------- */
@@ -131,39 +181,6 @@ a:hover {
     color: white;
     text-shadow: 1px 1px 4px black;
 }
-
-.hero-button {
-    padding: 1rem 2rem;
-    font-family: 'Lora', serif;
-    font-size: 1.5rem;
-    color: white;
-    background-color: black;
-    border-color: whitesmoke;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.hero-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    background-color: #b07080;
-    border-color: whitesmoke;
-}
-
-.main-catalog-button {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: #333;
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border: 2px solid #333;
-    cursor: pointer;
-    onmouseover="this.style.backgroundColor='#555';
-    this.style.borderColor='#555';
-    onmouseout="this.style.backgroundColor='#333';
-    this.style.borderColor='#333';
 
 .container {
   position: relative;
@@ -195,7 +212,7 @@ a:hover {
   font-size: 18px;
   font-weight: 400;
   letter-spacing: 0.15em;
-  color: var(--deco-gold-light);
+  color: var(--deco-tortora-light);
 }
 
 .text-block.is-stopped {
@@ -208,29 +225,29 @@ a:hover {
   margin: 2.2rem auto 0.5rem;
   text-align: center;
   font-style: italic;
-  color: var(--deco-black-soft);
+  color: var(--deco-scuro-soft);
 }
 
 .dettaglio-hero {
-  background-color: var(--deco-black);
-  color: var(--deco-ivory);
+  background-color: var(--deco-scuro);
+  color: var(--deco-cipria);
   padding: 3.5rem 1rem 2.5rem;
   text-align: center;
-  border-bottom: 4px double var(--deco-gold);
+  border-bottom: 4px double var(--deco-accento);
 }
 
 .dettaglio-hero .eyebrow {
   font-family: var(--font-utility);
   letter-spacing: 0.25em;
   font-size: 0.78rem;
-  color: var(--deco-gold);
+  color: var(--deco-accento);
   text-transform: uppercase;
 }
 
 .dettaglio-hero h1 {
   font-family: var(--font-display);
   letter-spacing: 0.06em;
-  color: var(--deco-gold-light);
+  color: var(--deco-tortora-light);
   margin-top: 0.6rem;
 }
 
@@ -242,8 +259,8 @@ a:hover {
 
 .dettaglio-body h2 {
   font-family: var(--font-heading);
-  color: var(--deco-emerald);
-  border-bottom: 1px solid var(--deco-gold);
+  color: var(--deco-bruno);
+  border-bottom: 1px solid var(--deco-bruno);
   padding-bottom: 0.4rem;
   margin-top: 2rem;
 }
@@ -255,15 +272,11 @@ a:hover {
   text-transform: uppercase;
 }
 
-.breadcrumb-deco a { color: var(--deco-gold); }
-
-.container {
-  background-color:#b07080;
-}
+.breadcrumb-deco a { color: var(--deco-bruno); }
 
 /* ---------- Footer ---------- */
 footer.bg-dark {
-  border-top: 2px solid var(--deco-gold);
+  border-top: 2px solid var(--deco-accento);
 }
 
 footer .list-inline-item a {

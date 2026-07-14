@@ -5,6 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>D'Annunzio e il Dèco - Artisti</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+    <link rel="icon" href="../assets/images/favicon.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/css/style1.css">
@@ -26,7 +30,7 @@
                         <a class="nav-link" href="../index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/progetto.html">Il progetto</a>
+                        <a class="nav-link" href="ilprogetto.html">Il progetto</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -40,13 +44,13 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="materiali-tecniche.html">Materiali e tecniche</a>
+                        <a class="nav-link" href="materialitecniche.html">Materiali e tecniche</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="luoghi-del-deco.html">Luoghi del Dèco</a>
+                        <a class="nav-link" href="luoghi.html">Luoghi del Dèco</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="artisti.html">Artisti</a>
+                        <a class="nav-link active" aria-current="page" href="persone.html">Artisti</a>
                     </li>
                 </ul>
 
@@ -102,7 +106,7 @@
                 <div class="materiali-grid" id="artisti-grid">
                     <!-- Link attivo -->
                     <a class="materiale-card" data-categoria="artista" href="artistiluoghitecniche/paginaartista2.html">
-                        <div class="fan"></div>
+                        <div class="fan"><img src="../assets/images/zecchin.jpg" alt=""></div>
                         <div class="card-caption">
                             <span class="card-index">01 — Artista · Pittura, incisione</span>
                             <h3>Vittorio Zecchin</h3>
@@ -111,7 +115,7 @@
                     </a>
 
                     <a class="materiale-card" data-categoria="artista" href="pages/artisti/chini.html">
-                        <div class="fan"></div>
+                        <div class="fan"><img src="../assets/images/chini.jpg" alt=""></div>
                         <div class="card-caption">
                             <span class="card-index">02 — Artista · Ceramica, decorazione</span>
                             <h3>Galileo Chini</h3>
@@ -120,16 +124,16 @@
                     </a>
 
                     <a class="materiale-card" data-categoria="artista" href="pages/artisti/cambellotti.html">
-                        <div class="fan"></div>
+                        <div class="fan"><img src="../assets/images/guidi.jpg" alt=""></div>
                         <div class="card-caption">
                             <span class="card-index">03 — Artista · Arti decorative, vetrate</span>
-                            <h3>Duilio Cambellotti</h3>
+                            <h3>Giuseppe Guidi</h3>
                             <p>Pittore, scultore e designer del paesaggio decorativo italiano.</p>
                         </div>
                     </a>
 
                     <a class="materiale-card" data-categoria="artista" href="pages/artisti/rizzarda.html">
-                        <div class="fan"></div>
+                        <div class="fan"><img src="../assets/images/CarloRizzarda.jpg" alt=""></div>
                         <div class="card-caption">
                             <span class="card-index">04 — Artista · Ferro battuto</span>
                             <h3>Carlo Rizzarda</h3>
@@ -138,16 +142,16 @@
                     </a>
 
                     <a class="materiale-card" data-categoria="committente" href="pages/artisti/casati.html">
-                        <div class="fan"></div>
+                        <div class="fan"><img src="../assets/images/delempicka.jpg" alt=""></div>
                         <div class="card-caption">
                             <span class="card-index">05 — Committente · Collezionista</span>
-                            <h3>Marchesa Luisa Casati</h3>
+                            <h3>Tamara de Lempicka</h3>
                             <p>Mecenate e musa, committente di ritratti e opere d'arte decorativa.</p>
                         </div>
                     </a>
                     <!-- Link attivo -->
                     <a class="materiale-card" data-categoria="imprenditore" href="artistiluoghitecniche/paginaartista2.html">
-                        <div class="fan"></div>
+                        <div class="fan"><img src="../assets/images/PAOLO-VENINI.jpg" alt=""></div>
                         <div class="card-caption">
                             <span class="card-index">06 — Imprenditore · Vetro</span>
                             <h3>Paolo Venini</h3>
@@ -207,11 +211,15 @@
             if (!bar || !stopBefore) return;
 
             function update() {
-                const stopY = stopBefore.offsetTop;
+                // Coordinate assolute rispetto al documento, indipendenti da eventuali
+                // antenati posizionati (evita il salto tra "fixed" e "absolute")
+                const stopY = stopBefore.getBoundingClientRect().top + window.scrollY;
                 const barCenterIfFixed = window.scrollY + (window.innerHeight / 2);
 
                 if (barCenterIfFixed >= stopY) {
-                    bar.style.setProperty('--stop-y', stopY + 'px');
+                    const parent = bar.offsetParent || document.documentElement;
+                    const parentTop = parent.getBoundingClientRect().top + window.scrollY;
+                    bar.style.setProperty('--stop-y', (stopY - parentTop) + 'px');
                     bar.classList.add('is-stopped');
                 } else {
                     bar.classList.remove('is-stopped');

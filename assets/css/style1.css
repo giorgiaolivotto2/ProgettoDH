@@ -1,23 +1,24 @@
 /* =========================================================
-   D'Annunzio e il Dèco — Stylesheet (palette Rosa Antico)
+   D'Annunzio e il Dèco — Stylesheet (palette Tortora e Avorio)
    ========================================================= */
 
-@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;500;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Lora:wght@400;500&family=Montserrat:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap");
 
 /* ---------- Variabili ---------- */
 :root {
-  --deco-scuro:      #2e1a1a;   /* bordeaux molto scuro */
-  --deco-scuro-soft: #3d2323;   /* bordeaux morbido */
-  --deco-rosa:       #b07080;   /* rosa antico principale */
-  --deco-rosa-light: #e8c4c0;   /* cipria chiara */
-  --deco-cipria:      #faf0ef;   /* bianco rosato caldo */
-  --deco-prugna:    #7a3e4e;   /* prugna (accento scuro) */
-  --deco-line:       rgba(176, 112, 128, 0.35);
+  --deco-scuro:      #5e3e31;   /* terracotta scuro */
+  --deco-scuro-soft: #724c3b;   /* terracotta morbido */
+  --deco-tortora:       #c1b2a4;   /* tortora neutro (bordi, linee) */
+  --deco-tortora-light: #ded5cc;   /* tortora chiaro */
+  --deco-cipria:      #f1ece6;   /* avorio caldo */
+  --deco-bruno:    #74593e;   /* bruno (accento scuro, link) */
+  --deco-accento:  #e1c3a7;   /* accento chiaro (su sfondo scuro: etichette, bordi, evidenze) */
+  --deco-line:       rgba(193, 178, 164, 0.35);
 
-  --font-display:  "Cinzel Decorative", "Cinzel", serif;
-  --font-heading:  "Cinzel", serif;
-  --font-body:     "EB Garamond", Georgia, serif;
-  --font-utility:  "Lora", sans-serif;
+  --font-display:  "Lora", serif;
+  --font-heading:  "Lora", serif;
+  --font-body:     "Lora", serif;
+  --font-utility:  "Lora", serif;
 }
 
 /* ---------- Base ---------- */
@@ -30,19 +31,19 @@ body {
   font-size: 1.05rem;
 }
 
-a       { color: var(--deco-prugna); }
-a:hover { color: var(--deco-rosa); }
+a       { color: var(--deco-bruno); }
+a:hover { color: var(--deco-scuro); }
 
 /* ---------- Navbar ---------- */
 .navbar.bg-dark {
   background-color: var(--deco-scuro) !important;
-  border-bottom: 2px solid var(--deco-rosa) !important;
+  border-bottom: 2px solid var(--deco-accento) !important;
 }
 
 .navbar-brand {
   font-family: var(--font-display);
   letter-spacing: 0.08em;
-  color: var(--deco-rosa-light) !important;
+  color: var(--deco-tortora-light) !important;
   font-size: 1.3rem;
 }
 
@@ -63,7 +64,7 @@ a:hover { color: var(--deco-rosa); }
   bottom: -2px;
   width: 0;
   height: 1px;
-  background: var(--deco-rosa);
+  background: var(--deco-accento);
   transition: width 0.25s ease;
 }
 
@@ -71,7 +72,7 @@ a:hover { color: var(--deco-rosa); }
 .navbar .nav-link.active::after { width: 100%; }
 
 .navbar .nav-link.active,
-.navbar .nav-link:hover { color: var(--deco-rosa-light) !important; }
+.navbar .nav-link:hover { color: var(--deco-tortora-light) !important; }
 
 .navbar .dropdown-menu {
   background-color: var(--deco-scuro-soft);
@@ -85,8 +86,8 @@ a:hover { color: var(--deco-rosa); }
 }
 
 .navbar .dropdown-item:hover {
-  background-color: var(--deco-prugna);
-  color: var(--deco-rosa-light);
+  background-color: var(--deco-bruno);
+  color: var(--deco-tortora-light);
 }
 
 .navbar .form-control,
@@ -98,13 +99,92 @@ a:hover { color: var(--deco-rosa); }
 }
 
 .navbar .btn-outline-success {
-  color: var(--deco-rosa-light);
-  border-color: var(--deco-rosa);
+  color: var(--deco-tortora-light);
+  border-color: var(--deco-accento);
 }
 
 .navbar .btn-outline-success:hover {
-  background-color: var(--deco-rosa);
+  background-color: var(--deco-accento);
   color: var(--deco-scuro);
+}
+
+/* ---------- Bottoni Bootstrap (uniformati al tema) ---------- */
+.btn-primary {
+  --bs-btn-bg: var(--deco-scuro);
+  --bs-btn-border-color: var(--deco-scuro);
+  --bs-btn-color: var(--deco-cipria);
+  --bs-btn-hover-bg: var(--deco-accento);
+  --bs-btn-hover-border-color: var(--deco-accento);
+  --bs-btn-hover-color: var(--deco-scuro);
+  --bs-btn-active-bg: var(--deco-bruno);
+  --bs-btn-active-border-color: var(--deco-bruno);
+  --bs-btn-active-color: var(--deco-cipria);
+  font-family: var(--font-utility);
+  letter-spacing: 0.04em;
+}
+
+.btn-outline-primary {
+  --bs-btn-bg: var(--deco-scuro);
+  --bs-btn-border-color: var(--deco-scuro);
+  --bs-btn-color: var(--deco-cipria);
+  --bs-btn-hover-bg: var(--deco-accento);
+  --bs-btn-hover-border-color: var(--deco-accento);
+  --bs-btn-hover-color: var(--deco-scuro);
+  --bs-btn-active-bg: var(--deco-bruno);
+  --bs-btn-active-border-color: var(--deco-bruno);
+  --bs-btn-active-color: var(--deco-cipria);
+  font-family: var(--font-utility);
+  letter-spacing: 0.04em;
+}
+
+/* ---------- Tab di categoria (uniformati al tema) ---------- */
+.nav-tabs {
+  border-bottom-color: var(--deco-line);
+}
+
+.nav-tabs .nav-link {
+  font-family: var(--font-utility);
+  color: var(--deco-bruno);
+  border-radius: 0;
+}
+
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link:focus {
+  color: var(--deco-scuro);
+  border-color: var(--deco-line) var(--deco-line) var(--deco-line);
+}
+
+.nav-tabs .nav-link.active {
+  color: var(--deco-scuro);
+  font-weight: 600;
+  background-color: transparent;
+  border-color: var(--deco-line) var(--deco-line) var(--deco-cipria);
+}
+
+/* ---------- Card Bootstrap (uniformata al tema) ---------- */
+.card {
+  --bs-card-bg: var(--deco-scuro-soft);
+  --bs-card-border-color: var(--deco-line);
+  --bs-card-border-radius: 0;
+  --bs-card-inner-border-radius: 0;
+}
+
+.card-title {
+  font-family: var(--font-heading);
+  color: var(--deco-cipria);
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+}
+
+.card-text {
+  font-family: var(--font-body);
+  color: rgba(241, 236, 230, 0.75);
+  font-size: 0.9rem;
+}
+
+.card hr {
+  border-color: var(--deco-line);
+  opacity: 1;
 }
 
 /* ---------- Hero con barra titolo scorrevole ---------- */
@@ -122,7 +202,7 @@ a:hover { color: var(--deco-rosa); }
   left: 0;
   width: 100vw;
   height: 50px;
-  background-color: rgba(46, 26, 26, 0.45);
+  background-color: rgba(94, 62, 49, 0.45);
   color: var(--deco-cipria);
   padding: 0 20px;
   margin: 0;
@@ -139,7 +219,7 @@ a:hover { color: var(--deco-rosa); }
   font-size: 18px;
   font-weight: 400;
   letter-spacing: 0.15em;
-  color: var(--deco-rosa-light);
+  color: var(--deco-tortora-light);
 }
 
 .text-block.is-stopped {
@@ -157,7 +237,8 @@ a:hover { color: var(--deco-rosa); }
 
 /* ---------- Griglia schede (Materiali, Artisti) ---------- */
 .materiali-section,
-.artisti-section {
+.artisti-section,
+.catalogo-section {
   padding: 3rem 0 4rem;
 }
 
@@ -183,18 +264,21 @@ a:hover { color: var(--deco-rosa); }
 
 .materiale-card:hover {
   transform: translateY(-4px);
-  border-color: var(--deco-rosa);
+  border-color: var(--deco-accento);
 }
 
 .materiale-card .fan {
   width: 100%;
   aspect-ratio: 4 / 3;
-  background:
-    radial-gradient(circle at 50% 120%, var(--deco-rosa) 0%, transparent 45%),
-    repeating-conic-gradient(from 0deg at 50% 120%,
-      var(--deco-prugna) 0deg 8deg,
-      var(--deco-scuro)   8deg 16deg);
-  opacity: 0.55;
+  overflow: hidden;
+  background-color: var(--deco-scuro);
+}
+
+.materiale-card .fan img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .materiale-card .card-caption {
@@ -207,7 +291,7 @@ a:hover { color: var(--deco-rosa); }
   font-family: var(--font-utility);
   font-size: 0.7rem;
   letter-spacing: 0.2em;
-  color: var(--deco-rosa);
+  color: var(--deco-accento);
   margin-bottom: 0.35rem;
 }
 
@@ -222,7 +306,7 @@ a:hover { color: var(--deco-rosa); }
 .materiale-card p {
   font-family: var(--font-body);
   font-size: 0.85rem;
-  color: rgba(250, 240, 239, 0.75);
+  color: rgba(241, 236, 230, 0.75);
   margin: 0.5rem 0 0;
 }
 
@@ -245,17 +329,17 @@ a:hover { color: var(--deco-rosa); }
   text-transform: uppercase;
   background-color: transparent;
   color: var(--deco-scuro);
-  border: 1px solid var(--deco-rosa);
+  border: 1px solid var(--deco-bruno);
   padding: 0.5rem 1rem;
   cursor: pointer;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.filtro-btn:hover { background-color: rgba(176, 112, 128, 0.15); }
+.filtro-btn:hover { background-color: rgba(193, 178, 164, 0.15); }
 
 .filtro-btn.active {
   background-color: var(--deco-scuro);
-  color: var(--deco-rosa-light);
+  color: var(--deco-tortora-light);
   border-color: var(--deco-scuro);
 }
 
@@ -265,8 +349,8 @@ a:hover { color: var(--deco-rosa); }
   font-size: 0.65rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--deco-cipria);
-  background-color: var(--deco-rosa);
+  color: var(--deco-scuro);
+  background-color: var(--deco-accento);
   padding: 0.15rem 0.5rem;
   margin-bottom: 0.4rem;
 }
@@ -303,18 +387,18 @@ a:hover { color: var(--deco-rosa); }
   transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
-.luogo-item:hover { border-color: var(--deco-rosa); }
+.luogo-item:hover { border-color: var(--deco-accento); }
 
 .luogo-item.active {
-  border-left-color: var(--deco-rosa);
-  background-color: var(--deco-prugna);
+  border-left-color: var(--deco-accento);
+  background-color: var(--deco-bruno);
 }
 
 .luogo-index {
   font-family: var(--font-utility);
   font-size: 0.75rem;
   letter-spacing: 0.15em;
-  color: var(--deco-rosa);
+  color: var(--deco-accento);
   flex-shrink: 0;
   padding-top: 0.15rem;
 }
@@ -326,19 +410,28 @@ a:hover { color: var(--deco-rosa); }
   margin: 0 0 0.15rem;
 }
 
+.luogo-item h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.luogo-item h3 a:hover {
+  text-decoration: underline;
+}
+
 .luogo-loc {
   font-family: var(--font-utility);
   font-size: 0.72rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--deco-rosa-light);
+  color: var(--deco-tortora-light);
   margin: 0 0 0.4rem;
 }
 
 .luogo-desc {
   font-family: var(--font-body);
   font-size: 0.85rem;
-  color: rgba(250, 240, 239, 0.8);
+  color: rgba(241, 236, 230, 0.8);
   margin: 0;
 }
 
@@ -353,16 +446,16 @@ a:hover { color: var(--deco-rosa); }
   display: block;
   width: 18px;
   height: 18px;
-  background-color: var(--deco-rosa);
+  background-color: var(--deco-accento);
   border: 2px solid var(--deco-scuro);
   transform: rotate(45deg);
-  box-shadow: 0 0 0 3px rgba(176, 112, 128, 0.3);
+  box-shadow: 0 0 0 3px rgba(193, 178, 164, 0.3);
 }
 
 .leaflet-popup-content-wrapper {
   background-color: var(--deco-scuro-soft);
   color: var(--deco-cipria);
-  border: 1px solid var(--deco-rosa);
+  border: 1px solid var(--deco-accento);
   border-radius: 0;
   font-family: var(--font-body);
 }
@@ -371,31 +464,41 @@ a:hover { color: var(--deco-rosa); }
 
 .leaflet-popup-content strong {
   font-family: var(--font-heading);
-  color: var(--deco-rosa-light);
+  color: var(--deco-tortora-light);
 }
 
 /* ---------- Pagine di dettaglio (tecnica / luogo / artista) ---------- */
-.dettaglio-hero {
+.dettaglio-hero,
+.antecatalogo-hero {
   background-color: var(--deco-scuro);
   color: var(--deco-cipria);
   padding: 3.5rem 1rem 2.5rem;
   text-align: center;
-  border-bottom: 4px double var(--deco-rosa);
+  border-bottom: 4px double var(--deco-accento);
 }
 
-.dettaglio-hero .eyebrow {
+.dettaglio-hero .eyebrow,
+.antecatalogo-hero .eyebrow {
   font-family: var(--font-utility);
   letter-spacing: 0.25em;
   font-size: 0.78rem;
-  color: var(--deco-rosa);
+  color: var(--deco-accento);
   text-transform: uppercase;
 }
 
-.dettaglio-hero h1 {
+.dettaglio-hero h1,
+.antecatalogo-hero h1 {
   font-family: var(--font-display);
   letter-spacing: 0.06em;
-  color: var(--deco-rosa-light);
+  color: var(--deco-tortora-light);
   margin-top: 0.6rem;
+}
+
+.antecatalogo-hero p {
+  max-width: 640px;
+  margin: 1rem auto 0;
+  color: rgba(241, 236, 230, 0.8);
+  font-style: italic;
 }
 
 .breadcrumb-deco {
@@ -405,7 +508,7 @@ a:hover { color: var(--deco-rosa); }
   text-transform: uppercase;
 }
 
-.breadcrumb-deco a { color: var(--deco-rosa); }
+.breadcrumb-deco a { color: var(--deco-bruno); }
 
 .dettaglio-layout {
   display: grid;
@@ -421,8 +524,8 @@ a:hover { color: var(--deco-rosa); }
 
 .dettaglio-body h2 {
   font-family: var(--font-heading);
-  color: var(--deco-prugna);
-  border-bottom: 1px solid var(--deco-rosa);
+  color: var(--deco-bruno);
+  border-bottom: 1px solid var(--deco-bruno);
   padding-bottom: 0.4rem;
   margin-top: 2rem;
 }
@@ -432,7 +535,7 @@ a:hover { color: var(--deco-rosa); }
   top: 1.5rem;
   background-color: var(--deco-scuro-soft);
   border: 1px solid var(--deco-line);
-  border-top: 3px solid var(--deco-rosa);
+  border-top: 3px solid var(--deco-accento);
   padding: 1.4rem 1.3rem 1.6rem;
 }
 
@@ -441,19 +544,21 @@ a:hover { color: var(--deco-rosa); }
   font-size: 0.72rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--deco-rosa);
+  color: var(--deco-accento);
   margin-bottom: 1rem;
 }
 
-.scheda-laterale dt {
+.scheda-laterale dt,
+.card dt {
   font-family: var(--font-utility);
   font-size: 0.75rem;
   letter-spacing: 0.05em;
-  color: rgba(250, 240, 239, 0.6);
+  color: rgba(241, 236, 230, 0.6);
   margin-top: 0.8rem;
 }
 
-.scheda-laterale dd {
+.scheda-laterale dd,
+.card dd {
   font-family: var(--font-body);
   font-size: 0.9rem;
   color: var(--deco-cipria);
@@ -467,10 +572,10 @@ a:hover { color: var(--deco-rosa); }
 }
 
 .deco-pullquote {
-  border-left: 3px solid var(--deco-rosa);
+  border-left: 3px solid var(--deco-bruno);
   margin: 2rem 0;
   padding: 1rem 1.4rem;
-  background-color: rgba(176, 112, 128, 0.08);
+  background-color: rgba(193, 178, 164, 0.08);
 }
 
 .deco-pullquote p {
@@ -485,7 +590,7 @@ a:hover { color: var(--deco-rosa); }
   font-family: var(--font-utility);
   font-size: 0.75rem;
   letter-spacing: 0.05em;
-  color: var(--deco-rosa);
+  color: var(--deco-bruno);
   font-style: normal;
 }
 
@@ -500,7 +605,7 @@ a:hover { color: var(--deco-rosa); }
   font-size: 0.72rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--deco-rosa);
+  color: var(--deco-bruno);
   margin-bottom: 1rem;
 }
 
@@ -527,12 +632,161 @@ a:hover { color: var(--deco-rosa); }
 }
 
 .correlati ul li a:hover {
-  border-color: var(--deco-rosa);
-  color: var(--deco-rosa-light);
+  border-color: var(--deco-accento);
+  color: var(--deco-tortora-light);
+}
+
+/* ---------- Antecatalogo ---------- */
+.catalogo-principale {
+  padding: 3rem 0 2.5rem;
+  text-align: center;
+}
+
+.catalogo-principale .intro {
+  max-width: 700px;
+  margin: 0 auto 1.8rem;
+  color: var(--deco-scuro-soft);
+}
+
+.btn-catalogo {
+  display: inline-block;
+  font-family: var(--font-utility);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--deco-cipria);
+  background-color: var(--deco-scuro);
+  border: 1px solid var(--deco-scuro);
+  padding: 0.8rem 2.2rem;
+  text-decoration: none;
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.btn-catalogo:hover {
+  background-color: var(--deco-accento);
+  border-color: var(--deco-accento);
+  color: var(--deco-scuro);
+}
+
+.deco-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 2.5rem auto;
+  text-align: center;
+  font-family: var(--font-utility);
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--deco-accento);
+}
+
+.deco-divider::before,
+.deco-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: var(--deco-line);
+}
+
+.percorsi-section {
+  padding: 0.5rem 0 4rem;
+}
+
+.percorsi-section > .container > p {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  text-align: center;
+  color: var(--deco-scuro-soft);
+}
+
+.percorsi-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.percorso-card {
+  display: flex;
+  align-items: stretch;
+  position: relative;
+  background-color: var(--deco-scuro-soft);
+  border: 1px solid var(--deco-line);
+  text-decoration: none;
+  overflow: hidden;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.percorso-card:hover {
+  transform: translateX(6px);
+  border-color: var(--deco-accento);
+}
+
+.percorso-fan {
+  flex: 0 0 220px;
+  overflow: hidden;
+  background-color: var(--deco-scuro);
+}
+
+.percorso-fan img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.percorso-body {
+  flex: 1;
+  padding: 1.4rem 1.8rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (max-width: 700px) {
+  .percorso-card { flex-direction: column; }
+  .percorso-fan { flex: 0 0 140px; }
+  .percorso-body { text-align: center; align-items: center; }
+}
+
+.percorso-index {
+  display: block;
+  font-family: var(--font-utility);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: var(--deco-accento);
+  margin-bottom: 0.35rem;
+}
+
+.percorso-body h2 {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+  color: var(--deco-cipria);
+  margin: 0;
+}
+
+.percorso-body p {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: rgba(241, 236, 230, 0.75);
+  margin: 0.5rem 0 0.8rem;
+}
+
+.percorso-link {
+  display: inline-block;
+  font-family: var(--font-utility);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--deco-tortora-light);
+  border-bottom: 1px solid var(--deco-accento);
+  padding-bottom: 2px;
 }
 
 /* ---------- Footer ---------- */
-footer.bg-dark { border-top: 2px solid var(--deco-rosa); }
+footer.bg-dark { border-top: 2px solid var(--deco-accento); }
 
 footer .list-inline-item a {
   font-family: var(--font-utility);

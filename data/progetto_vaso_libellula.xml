@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<lido:lido xmlns:lido="http://www.lido-schema.org" 
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+<lido:lido xmlns:lido="http://www.lido-schema.org"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
   xmlns:crm="http://www.cidoc-crm.org/cidoc-crm/"
@@ -41,7 +41,7 @@
       <!-- DESCRIPTIVE METADATA -->
 
   <lido:descriptiveMetadata xml:lang="en">
-    
+
     <!-- 1 OBJECT  WORK/TYPE -->
 
     <lido:objectClassificationWrap>
@@ -58,7 +58,7 @@
               Design drawings
             </skos:prefLabel>
           </skos:Concept>
-          <lido:term 
+          <lido:term
             lido:pref="http://terminology.lido-schema.org/lido00526"
             xml:lang="en">
             Project
@@ -69,8 +69,7 @@
           </lido:term>
         </lido:objectWorkType>
       </lido:objectWorkTypeWrap>
-    </lido:objectClassificationWrap>
-      
+
       <!-- 2 CLASSIFICATION -->
 
     <lido:classificationWrap>
@@ -89,9 +88,9 @@
                   Arti decorative
               </skos:prefLabel>
           </skos:Concept>
+          <lido:conceptID lido:type="URI" lido:source="BNCF">https://thes.bncf.firenze.sbn.it/termine.php?id=7479</lido:conceptID>
           <lido:term
               lido:addedSearchTerm="yes"
-              rdf:about="https://thes.bncf.firenze.sbn.it/termine.php?id=7479"
               xml:lang="it">
               Arti decorative
           </lido:term>
@@ -119,7 +118,8 @@
           </lido:term>
       </lido:classification>
     </lido:classificationWrap>
-    
+    </lido:objectClassificationWrap>
+
     <!-- OBJECT IDENTIFICATION -->
 
     <lido:objectIdentificationWrap>
@@ -128,12 +128,12 @@
       <lido:titleWrap>
         <lido:titleSet
           lido:pref="http://terminology.lido-schema.org/lido00169">
-          <lido:appellationValue 
+          <lido:appellationValue
             lido:pref="http://terminology.lido-schema.org/lido00169"
             xml:lang="it">
             Disegno del modello 5481
           </lido:appellationValue>
-          <lido:appellationValue 
+          <lido:appellationValue
             lido:pref="http://terminology.lido-schema.org/lido00169"
             xml:lang="it">
             Design of model 5481
@@ -143,42 +143,46 @@
 
       <!-- 4 INSCRIPTION -->
 
-      <lido:inscriptions>
-        <inscriptionTranscription
-          xml:lang="it">
-          M.V.M Cappelin &amp; C. S. A. 
-        </inscriptionTranscription>
-        <inscriptionDescription>
-          <descriptiveNoteValue
-            xml:lang="en">
-            letterheads
-          </descriptiveNoteValue>
-          <sourceDescriptiveNote>
-            Venetian glasses : the Carla Nasci and Ferruccio Franzoia collection / edited by Tiziana Casagrande and Ferruccio Franzoia; p.337.
-          </sourceDescriptiveNote>
-        </inscriptionDescription>
-      </lido:inscriptions>
+      <lido:inscriptionsWrap>
+        <lido:inscriptions>
+          <lido:inscriptionTranscription
+            xml:lang="it">
+            M.V.M Cappelin &amp; C. S. A.
+          </lido:inscriptionTranscription>
+          <lido:inscriptionDescription>
+            <lido:descriptiveNoteValue
+              xml:lang="en">
+              letterheads
+            </lido:descriptiveNoteValue>
+            <lido:sourceDescriptiveNote>
+              Venetian glasses : the Carla Nasci and Ferruccio Franzoia collection / edited by Tiziana Casagrande and Ferruccio Franzoia; p.337.
+            </lido:sourceDescriptiveNote>
+          </lido:inscriptionDescription>
+        </lido:inscriptions>
+      </lido:inscriptionsWrap>
 
       <!-- 5 REPOSITORY -->
-        
+
       <lido:repositoryWrap>
-        <sourceRepositorySet
+        <lido:repositorySet>
+          <lido:sourceRepositorySet
           xml:lang="en">
           The Nasci-Franzoia collection is located within the Carlo Rizzarda Gallery of Modern Art in Feltre. It is the largest private collection of Muranese glass in the world. The various pieces come from other collections and were accumulated by the married couple Nasci-Franzoia.
-        </sourceRepositorySet>
+          </lido:sourceRepositorySet>
+        </lido:repositorySet>
       </lido:repositoryWrap>
 
         <!-- 6 STATE/EDITION -->
 
 
         <!-- 7 OBJECT DESCRIPTION -->
-        
+
       <!-- 8 MESUREMENTS -->
       <lido:objectMeasurementsWrap>
         <lido:objectMeasurementsSet>
-      
+
           <!-- Display generale -->
-          <lido:displayObjectMeasurements 
+          <lido:displayObjectMeasurements
             xml:lang="en">
             Height x width: 42 x 30 cm
             </lido:displayObjectMeasurements>
@@ -186,7 +190,7 @@
               <!-- MISURA 1: Altezza -->
               <lido:measurementsSet>
                 <lido:measurementType>
-                  <skos:Concept 
+                  <skos:Concept
                     rdf:about="http://www.wikidata.org/wiki/Q208826">
                       <skos:prefLabel
                         xml:lang="en">
@@ -210,7 +214,7 @@
             <!-- MISURA 2: larghezza  -->
               <lido:measurementsSet>
                 <lido:measurementType>
-                  <skos:Concept 
+                  <skos:Concept
                     rdf:about="https://www.wikidata.org/wiki/Q35059">
                       <skos:prefLabel
                         xml:lang="en">
@@ -231,130 +235,17 @@
                   30
                 </lido:measurementValue>
               </lido:measurementsSet>
-                
-                <!-- Scala -->
-              <lido:scaleObjectMeasurements>1:1</lido:scaleObjectMeasurements>
-                
+
                 <!-- Forma -->
-              <lido:shapeObjectMeasurements>Rectangle</lido:shapeObjectMeasurements>
+              <lido:shapeMeasurements>Rectangle</lido:shapeMeasurements>
+
+                <!-- Scala -->
+              <lido:scaleMeasurements>1:1</lido:scaleMeasurements>
             </lido:objectMeasurements>
         </lido:objectMeasurementsSet>
       </lido:objectMeasurementsWrap>
-      
-      <!--10  EVENT WRAP (Creation/Production) -->
 
-      <lido:eventWrap>
-        <lido:eventSet
-          lido:sortorder="1"
-          mostNotableEvent="1">
-          <lido:displayEvent
-            xml:lang="en">
-            Designed by Vittorio Zecchin while being artistic directot for Cappellin-Venini (1921-1922)
-          </lido:displayEvent>
-          <lido:event>
-            <lido:eventType>
-              <skos:Concept
-              rdf:about="http://terminology.lido-schema.org/lido00012">
-              <skos:prefLabel
-                xml:lang="en">
-                Creation
-              </skos:prefLabel>
-              </skos:Concept>
-            </lido:eventType>
-            <lido:eventActor>
-              <lido:displayActorInRole
-                xml:lang="en">
-                Designer: Vittorio Zecchin (1878-1947)
-              </lido:displayActorInRole>
-              <actorInRole>
-                  <lido:actor
-                    lido:type="http://terminology.lido-schema.org/lido00163">
-                  <lido:actorID
-                    lido:type="http://terminology.lido-schema.org/lido00099">
-                    http://viaf.org/viaf/72322017
-                  </lido:actorID>
-                  <lido:nameActorSet>
-                  <!-- Preferred name -->
-                    <lido:appellationValue
-                      lido:pref="http://terminology.lido-schema.org/lido00169"
-                      xml:lang="it">
-                      Zecchin, Vittorio
-                    </lido:appellationValue>
-                      <!-- Display name -->
-                    <lido:appellationValue
-                      lido:pref="terminology.lido-schema.org/lido00526"
-                      xml:lang="en">
-                      Vittorio Zecchin
-                    </lido:appellationValue>
-                  </lido:nameActorSet>
-                </lido:actor>
-                <lido:roleActor>
-                  <skos:Concept
-                    rdf:about="http://vocab.getty.edu/aat/300025190">
-                    <skos:prefLabel
-                      xml:lang="en">
-                      designers
-                    </skos:prefLabel>
-                  </skos:Concept> 
-                  <!-- Display name -->
-                  <lido:term
-                    lido:pref="http://terminology.lido-schema.org/lido00526"
-                    xml:lang="en">
-                    desiger
-                  </lido:term>
-                </lido:roleActor>
-              </actorInRole>
-            </lido:eventActor>
-            <lido:eventDate>
-              <lido:displayDate xml:lang="en">
-                1921-1922
-              </lido:displayDate>
-              <!-- Estimated date -->
-              <lido:date
-                lido:type="http://terminology.lido-schema.org/lido00529">
-                <lido:earliestDate
-                  lido:type="http://terminology.lido-schema.org/lido00529">
-                  1921
-                </lido:earliestDate>
-                <lido:latestDate
-                  lido:type="http://terminology.lido-schema.org/lido00529">
-                  1922
-                </lido:latestDate>
-              </lido:date>
-            </lido:eventDate>
-            <lido:eventPlace>
-              <lido:displayPlace
-                xml:lang="en">
-                Murano island, Fondamenta dei Vetrai (VE), between 1921 and 1922
-              </lido:displayPlace>
-              <!-- city -->
-              <lido:place
-                lido:politicalentity="https://www.wikidata.org/wiki/Q515">
-                <lido:pladeId
-                  lido:type="http://terminology.lido-schema.org/lido00099">
-                  https://www.wikidata.org/wiki/Q641
-                </lido:pladeId>
-                <lido:namePlaceSet>
-                  <!-- Preferred label -->
-                  <lido:appellationValue
-                      lido:pref="http://terminology.lido-schema.org/lido00169"
-                      xml:lang="en">
-                      Venice
-                  </lido:appellationValue>
-                </lido:namePlaceSet>
-                <lido:gml>
-                  <gml:Point>
-                    <gml:pos>45.4408474, 12.3155151</gml:pos>
-                  </gml:Point>
-                </lido:gml>
-              </lido:place>
-            </lido:eventPlace>
-          </lido:event> 
-        </lido:eventSet>
-      </lido:eventWrap>
-      
-      <!-- Materiale e tecnica -->
-            
+
       <lido:objectMaterialsTechWrap>
        <lido:objectMaterialsTechSet>
         <lido:displayMaterialsTech
@@ -417,9 +308,126 @@
         </lido:objectMaterialsTechSet>
       </lido:objectMaterialsTechWrap>
 
+    </lido:objectIdentificationWrap>
+
+
+      <!--10  EVENT WRAP (Creation/Production) -->
+
+      <lido:eventWrap>
+        <lido:eventSet
+          lido:sortorder="1"
+          lido:mostNotableEvent="1">
+          <lido:displayEvent
+            xml:lang="en">
+            Designed by Vittorio Zecchin while being artistic directot for Cappellin-Venini (1921-1922)
+          </lido:displayEvent>
+          <lido:event>
+            <lido:eventType>
+              <skos:Concept
+              rdf:about="http://terminology.lido-schema.org/lido00012">
+              <skos:prefLabel
+                xml:lang="en">
+                Creation
+              </skos:prefLabel>
+              </skos:Concept>
+            </lido:eventType>
+            <lido:eventActor>
+              <lido:displayActorInRole
+                xml:lang="en">
+                Designer: Vittorio Zecchin (1878-1947)
+              </lido:displayActorInRole>
+              <lido:actorInRole>
+                  <lido:actor
+                    lido:type="http://terminology.lido-schema.org/lido00163">
+                  <lido:actorID
+                    lido:type="http://terminology.lido-schema.org/lido00099">
+                    http://viaf.org/viaf/72322017
+                  </lido:actorID>
+                  <lido:nameActorSet>
+                  <!-- Preferred name -->
+                    <lido:appellationValue
+                      lido:pref="http://terminology.lido-schema.org/lido00169"
+                      xml:lang="it">
+                      Zecchin, Vittorio
+                    </lido:appellationValue>
+                      <!-- Display name -->
+                    <lido:appellationValue
+                      lido:pref="terminology.lido-schema.org/lido00526"
+                      xml:lang="en">
+                      Vittorio Zecchin
+                    </lido:appellationValue>
+                  </lido:nameActorSet>
+                </lido:actor>
+                <lido:roleActor>
+                  <skos:Concept
+                    rdf:about="http://vocab.getty.edu/aat/300025190">
+                    <skos:prefLabel
+                      xml:lang="en">
+                      designers
+                    </skos:prefLabel>
+                  </skos:Concept>
+                  <!-- Display name -->
+                  <lido:term
+                    lido:pref="http://terminology.lido-schema.org/lido00526"
+                    xml:lang="en">
+                    desiger
+                  </lido:term>
+                </lido:roleActor>
+              </lido:actorInRole>
+            </lido:eventActor>
+            <lido:eventDate>
+              <lido:displayDate xml:lang="en">
+                1921-1922
+              </lido:displayDate>
+              <!-- Estimated date -->
+              <lido:date>
+                <lido:earliestDate
+                  lido:type="http://terminology.lido-schema.org/lido00529">
+                  1921
+                </lido:earliestDate>
+                <lido:latestDate
+                  lido:type="http://terminology.lido-schema.org/lido00529">
+                  1922
+                </lido:latestDate>
+              </lido:date>
+            </lido:eventDate>
+            <lido:eventPlace>
+              <lido:displayPlace
+                xml:lang="en">
+                Murano island, Fondamenta dei Vetrai (VE), between 1921 and 1922
+              </lido:displayPlace>
+              <!-- city -->
+              <lido:place
+                lido:politicalEntity="https://www.wikidata.org/wiki/Q515">
+                <lido:placeID
+                  lido:type="http://terminology.lido-schema.org/lido00099">
+                  https://www.wikidata.org/wiki/Q641
+                </lido:placeID>
+                <lido:namePlaceSet>
+                  <!-- Preferred label -->
+                  <lido:appellationValue
+                      lido:pref="http://terminology.lido-schema.org/lido00169"
+                      xml:lang="en">
+                      Venice
+                  </lido:appellationValue>
+                </lido:namePlaceSet>
+                <lido:gml>
+                  <gml:Point>
+                    <gml:pos>45.4408474, 12.3155151</gml:pos>
+                  </gml:Point>
+                </lido:gml>
+              </lido:place>
+            </lido:eventPlace>
+          </lido:event>
+        </lido:eventSet>
+      </lido:eventWrap>
+
       <!-- OBJECT RELATIONS -->
 
+      <lido:objectRelationWrap>
+
       <!-- 11 SUBJECT -->
+      <lido:subjectWrap>
       <lido:subjectSet>
         <!-- Description -->
         <lido:subject
@@ -429,7 +437,7 @@
                 rdf:about="https://www.wikidata.org/wiki/Q312476">
                 <skos:prefLabel
                   xml:lang="en">
-                  Design 
+                  Design
                 </skos:prefLabel>
               </skos:Concept>
               <!-- Display label -->
@@ -456,9 +464,9 @@
             </lido:subjectConcept>
         </lido:subject>
       </lido:subjectSet>
+      </lido:subjectWrap>
 
       <!-- 12 RELATED WORKS -->
-      <lido:objectRelationWrap>
         <lido:relatedWorksWrap>
           <lido:relatedWorkSet
             lido:sortorder="1">
@@ -471,11 +479,11 @@
                 <lido:objectID
                   lido:type="http://terminology.lido-schema.org/lido00099"
                   lido:source="Galleria d'Arte Moderna Carlo Rizzarda">
-                  inv. n. FVNF19 
+                  inv. n. FVNF19
                 </lido:objectID>
                 <lido:objectNote
                   xml:lang="en">
-                  Vaso Libellula, Galleria Rizzarda, inv. n. FVNF19 
+                  Vaso Libellula, Galleria Rizzarda, inv. n. FVNF19
                 </lido:objectNote>
               </lido:object>
             </lido:relatedWork>
@@ -495,31 +503,29 @@
         </lido:relatedWorksWrap>
       </lido:objectRelationWrap>
 
-    </lido:objectIdentificationWrap>
-
   </lido:descriptiveMetadata>
 
   <!-- ADMINISTRATIVE METADATA -->
 
   <lido:administrativeMetadata xml:lang="en">
 
-  
+
     <!-- 13 RIGHTS FOR WORK SET -->
 
-  <rightsWorkWrap>
+  <lido:rightsWorkWrap>
     <lido:rightsWorkSet>
       <lido:rightsType
         lido:type="http://terminology.lido-schema.org/lido00920">
-        <skos:Concept 
+        <skos:Concept
           rdf:about="http://vocab.getty.edu/aat/300055598">
-          <skos:prefLabel 
+          <skos:prefLabel
             xml:lang="en">
             copyright
           </skos:prefLabel>
         </skos:Concept>
       </lido:rightsType>
       <lido:rightsHolder>
-        <lido:legalBodyID 
+        <lido:legalBodyID
           lido:type="http://terminology.lido-schema.org/lido00099">
           https://anagrafe.iccu.sbn.it/isil/IT-BL0023
         </lido:legalBodyID>
@@ -531,8 +537,8 @@
         </lido:legalBodyName>
       </lido:rightsHolder>
     </lido:rightsWorkSet>
-  </rightsWorkWrap>
-  
+  </lido:rightsWorkWrap>
+
     <!-- 14 RECORD SET-->
 
   <lido:recordWrap>
@@ -559,7 +565,7 @@
     </lido:recordType>
     <!-- recordSource -->
     <lido:recordSource>
-      <lido:legalBodyID 
+      <lido:legalBodyID
         lido:type="http://terminology.lido-schema.org/lido00099">
         https://anagrafe.iccu.sbn.it/isil/IT-BL0023
       </lido:legalBodyID>
@@ -576,11 +582,11 @@
 
     <lido:resourceWrap>
     <lido:resourceSet>
-      <lido:resourceID 
+      <lido:resourceID
         lido:type="local">
         vaso_libellula_FVNFD3.jpg
       </lido:resourceID>
-      <lido:resourceRepresentation 
+      <lido:resourceRepresentation
         lido:type="image_full">
           <lido:linkResource>
             assets\images\progetto_vaso_libellula.jpg
@@ -591,17 +597,17 @@
          lido:type="URI" lido:source="AAT">
          http://vocab.getty.edu/aat/300215302
         </lido:conceptID>
-        <lido:term 
+        <lido:term
           xml:lang="en">
           digital photograph
         </lido:term>
       </lido:resourceType>
       <lido:resourceRelType>
-        <lido:conceptID 
+        <lido:conceptID
           lido:type="URI" lido:source="AAT">
           http://vocab.getty.edu/aat/300215302
         </lido:conceptID>
-        <lido:term 
+        <lido:term
           xml:lang="en">
           image of object
         </lido:term>
@@ -610,5 +616,5 @@
   </lido:resourceWrap>
 
 </lido:administrativeMetadata>
-  
+
 </lido:lido>

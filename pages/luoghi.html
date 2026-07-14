@@ -5,6 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>D'Annunzio e il Dèco - Luoghi del Dèco</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+    <link rel="icon" href="../assets/images/favicon.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -16,7 +20,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary navbar bg-dark border-bottom border-body" data-bs-theme="dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">D'Annunzio e il Dèco</a>
+            <a class="navbar-brand" href="../index.html">D'Annunzio e il Dèco</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -28,7 +32,7 @@
                         <a class="nav-link" href="../index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/prgetto.html">Il progetto</a>
+                        <a class="nav-link" href="ilprogetto.html">Il progetto</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -71,7 +75,7 @@
         <section>
             <div class="container">
                 <div class="hero-figure">
-                    <img src="assets/images/Capesaro.jpg"
+                    <img src="../assets/images/Capesaro.jpg"
                         alt="Museo d'arte moderna Ca'Pesaro a Venezia">
                     <div class="text-block">
                         <h2>LUOGHI</h2>
@@ -91,7 +95,7 @@
                 <div class="luoghi-filtri" role="group" aria-label="Filtra i luoghi per tipologia">
                     <button type="button" class="filtro-btn active" data-filter="tutti">Tutti</button>
                     <button type="button" class="filtro-btn" data-filter="museo">Musei</button>
-                    <button type="button" class="filtro-btn" data-filter="casa-museo">Case museo / collezioni private</button>
+                    <button type="button" class="filtro-btn" data-filter="casa-museo">Case museo/ collezioni private</button>
                     <button type="button" class="filtro-btn" data-filter="manifattura">Manifatture</button>
                 </div>
 
@@ -102,38 +106,48 @@
                             <span class="luogo-index">01</span>
                             <div>
                                 <span class="luogo-tag">Casa museo</span>
-                                <h3 href="artistiluoghitecniche/vittoriale.html">Il Vittoriale degli Italiani </h3>
+                                <h3><a href="artistiluoghitecniche/vittoriale.html">Il Vittoriale degli Italiani</a></h3>
                                 <p class="luogo-loc">Gardone Riviera (BS)</p>
                                 <p class="luogo-desc">La residenza-museo di Gabriele D'Annunzio, un complesso
                                     monumentale che intreccia eclettismo, simbolismo e gusto decorativo.</p>
                             </div>
                         </li>
-                        <li class="luogo-item" data-categoria="casa-museo" data-lat="45.4685" data-lng="9.2010" tabindex="0">
+                        <li class="luogo-item" data-categoria="museo" data-lat="45.47237972392137" data-lng="9.173939819928338" tabindex="0">
                             <span class="luogo-index">02</span>
                             <div>
-                                <span class="luogo-tag">Casa museo</span>
-                                <h3>Villa Necchi Campiglio</h3>
+                                <span class="luogo-tag">Museo</span>
+                                <h3>Triennale di Milano</h3>
                                 <p class="luogo-loc">Milano</p>
                                 <p class="luogo-desc">Esempio di architettura razionalista con interni Dèco, oggi
                                     casa museo aperta al pubblico nel cuore di Milano.</p>
                             </div>
                         </li>
-                        <li class="luogo-item" data-categoria="museo" data-lat="45.5050" data-lng="12.3450" tabindex="0">
+                        <li class="luogo-item" data-categoria="museo" data-lat="45.441228817797196" data-lng="12.332700442955106" tabindex="0">
                             <span class="luogo-index">03</span>
                             <div>
                                 <span class="luogo-tag">Museo</span>
-                                <h3>Museo del Vetro di Murano</h3>
-                                <p class="luogo-loc">Murano, Venezia</p>
+                                <h3>Ca'Pesaro</h3>
+                                <p class="luogo-loc">Venezia, Santa Croce</p>
                                 <p class="luogo-desc">Racconta la storia della tradizione vetraria muranese, con
                                     sale dedicate anche alla produzione del primo Novecento.</p>
                             </div>
                         </li>
-                        <li class="luogo-item" data-categoria="manifattura" data-lat="46.0167" data-lng="11.9000" tabindex="0">
+                        <li class="luogo-item" data-categoria="museo" data-lat="46.0167" data-lng="11.9000" tabindex="0">
                             <span class="luogo-index">04</span>
                             <div>
-                                <span class="luogo-tag">Manifattura</span>
-                                <h3 href="artistiluoghitecniche/galleriarizzarda.html">Museo Carlo Rizzarda</h3>
+                                <span class="luogo-tag">Museo</span>
+                                <h3><a href="artistiluoghitecniche/galleriarizzarda.html">Museo Carlo Rizzarda</a></h3>
                                 <p class="luogo-loc">Feltre (BL)</p>
+                                <p class="luogo-desc">Ospitato nell'antica officina del fabbro d'arte, conserva
+                                    opere e strumenti della manifattura del ferro battuto Dèco.</p>
+                            </div>
+                        </li>
+                        <li class="luogo-item" data-categoria="manifattura" data-lat="43.952355405900825" data-lng="11.395219937679457" tabindex="0">
+                            <span class="luogo-index">05</span>
+                            <div>
+                                <span class="luogo-tag">Manifattura</span>
+                                <h3><a href="artistiluoghitecniche/galleriarizzarda.html">Villa Pecori Giraldi</a></h3>
+                                <p class="luogo-loc">Borgo San Lorenzo (FI)</p>
                                 <p class="luogo-desc">Ospitato nell'antica officina del fabbro d'arte, conserva
                                     opere e strumenti della manifattura del ferro battuto Dèco.</p>
                             </div>
@@ -266,11 +280,15 @@
             if (!bar || !stopBefore) return;
 
             function update() {
-                const stopY = stopBefore.offsetTop; // punto dove la barra deve fermarsi
+                // Coordinate assolute rispetto al documento, indipendenti da eventuali
+                // antenati posizionati (evita il salto tra "fixed" e "absolute")
+                const stopY = stopBefore.getBoundingClientRect().top + window.scrollY;
                 const barCenterIfFixed = window.scrollY + (window.innerHeight / 2);
 
                 if (barCenterIfFixed >= stopY) {
-                    bar.style.setProperty('--stop-y', stopY + 'px');
+                    const parent = bar.offsetParent || document.documentElement;
+                    const parentTop = parent.getBoundingClientRect().top + window.scrollY;
+                    bar.style.setProperty('--stop-y', (stopY - parentTop) + 'px');
                     bar.classList.add('is-stopped');
                 } else {
                     bar.classList.remove('is-stopped');

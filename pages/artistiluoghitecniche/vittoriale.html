@@ -5,13 +5,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>D'Annunzio e il Dèco - Il Vittoriale degli Italiani</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon-16x16.png">
+    <link rel="icon" href="../../assets/images/favicon.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="../../assets/css/style1.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary navbar bg-dark border-bottom border-body" data-bs-theme="dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="../../index.html">D'Annunzio e il Dèco</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -22,7 +26,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../prgetto.html">Il progetto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../ilprogetto.html">Il progetto</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Il periodo</a>
                         <ul class="dropdown-menu">
@@ -31,10 +35,28 @@
                             <li><a class="dropdown-item" href="#">Le arti decorative</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="../../materiali-tecniche.html">Materiali e tecniche</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../../luoghi-del-deco.html">Luoghi del Dèco</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../../artisti.html">Artisti</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../materialitecniche.html">Materiali e tecniche</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../luoghi.html">Luoghi del Dèco</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../persone.html">Artisti</a></li>
                 </ul>
+
+                <form class="d-flex align-items-center gap-2" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Gabriele D'Annunzio"
+                        aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">Ricerca</button>
+
+                    <div class="dropdown">
+                        <button class="btn btn-outline-secondary dropdown-toggle" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Lingua
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="?lang=it">Italiano</a></li>
+                            <li><a class="dropdown-item" href="?lang=en">English</a></li>
+                            <li><a class="dropdown-item" href="?lang=fr">Français</a></li>
+                        </ul>
+                    </div>
+                </form>
             </div>
         </div>
     </nav>
@@ -49,7 +71,7 @@
     <main>
         <div class="container">
             <p class="breadcrumb-deco mt-3">
-                <a href="../1luoghi.html">&larr; Torna a Luoghi</a>
+                <a href="../luoghi.html">&larr; Torna a Luoghi</a>
             </p>
         </div>
 
@@ -119,8 +141,8 @@
                 <div class="correlati">
                     <h3>Correlati</h3>
                     <ul>
-                        <li><a href="../../materiali-tecniche.html">Vetro muranese</a></li>
-                        <li><a href="../../materiali-tecniche.html">Ferri battuti</a></li>
+                        <li><a href="../materialitecniche.html">Vetro muranese</a></li>
+                        <li><a href="../materialitecniche.html">Ferri battuti</a></li>
                         <li><a href="../artisti/de-carolis.html">Adolfo De Carolis</a></li>
                         <li><a href="../artisti/cambellotti.html">Duilio Cambellotti</a></li>
                     </ul>

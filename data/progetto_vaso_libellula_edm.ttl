@@ -1,0 +1,108 @@
+@prefix edm:      <http://www.europeana.eu/schemas/edm/> .
+@prefix ore:      <http://www.openarchives.org/ore/terms/> .
+@prefix dc:       <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix skos:     <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf:     <http://xmlns.com/foaf/0.1/> .
+@prefix wgs84:    <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+
+# ------------------------------------------------------------------
+# NOTA: stesso namespace segnaposto usato per il vaso (FVNF19), per
+# permettere di collegare i due CHO tra loro (disegno -> vaso), come
+# indicato dal lido:relatedWorkRelType "is design for" nel LIDO.
+# ------------------------------------------------------------------
+@base <https://data.example.org/museum/FVNFD3/> .
+
+
+# ====================================================================
+# 1. PROVIDED CHO — il disegno progettuale
+# ====================================================================
+
+<cho> a edm:ProvidedCHO ;
+
+  dc:identifier "FVNFD3", "https://anagrafe.iccu.sbn.it/it/ricerca/dettaglio.html?codice_isil=it-BL0023/lido-objFVNFD3" ;
+
+  dc:title "Disegno del modello 5481"@it, "Design of model 5481"@en ;
+
+  # Tipo di oggetto — riuso diretto del concetto Getty AAT già presente nel LIDO
+  dc:type <http://vocab.getty.edu/page/aat/300069413> ;
+  dc:type "progetto"@it, "design drawing"@en ;
+
+  # Genere / categoria (arti decorative)
+  dcterms:type <http://vocab.getty.edu/page/aat/300411641> ;
+
+  # Materiali e tecniche — riuso dei concetti Getty AAT già linkati nel LIDO
+  dcterms:medium
+    <http://vocab.getty.edu/page/aat/300022443> ,   # Graphite pencil
+    <http://vocab.getty.edu/page/aat/300014157> ;   # Drawing paper
+
+  # Soggetto — riuso dei concetti Wikidata già linkati nel LIDO
+  dc:subject
+    <https://www.wikidata.org/wiki/Q312476> ,       # Design
+    <https://www.wikidata.org/wiki/Q185925> ;        # Graphic design
+
+  dcterms:extent "Altezza x larghezza: 42 x 30 cm"@it ;
+
+  # Creazione
+  dc:creator <../FVNF19/agent/zecchin> ;
+  dcterms:created <timespan/1921-1922> ;
+  dcterms:spatial <../FVNF19/place/venice> ;
+
+  # Iscrizione (carta intestata)
+  dc:description "Iscrizione (carta intestata): \"M.V.M Cappelin & C. S. A.\""@it ;
+
+  # Opera correlata — il vaso realizzato a partire da questo disegno ("is design for" nel LIDO)
+  dcterms:relation <../FVNF19/cho> ;
+
+  # Collocazione attuale / provenienza
+  edm:currentLocation "Galleria d'Arte Moderna Carlo Rizzarda, Feltre"@it ;
+  dcterms:provenance "Collezione Nasci-Franzoia, conservata presso la Galleria d'Arte Moderna Carlo Rizzarda, Feltre; la più grande collezione privata al mondo di vetro muranese."@en ;
+
+  dc:rights "copyright"@en ;
+  dcterms:rights <http://vocab.getty.edu/aat/300055598> .
+
+
+# ====================================================================
+# 2. TIMESPAN
+# ====================================================================
+# NOTA: l'evento di progettazione (1921-1922) è più circoscritto di
+# quello di produzione del vaso (1921-1926, vedi il file EDM del vaso
+# FVNF19) — coerente con il fatto che il disegno precede la
+# fabbricazione vera e propria.
+
+<timespan/1921-1922> a edm:TimeSpan ;
+  skos:prefLabel "1921-1922"@en ;
+  edm:begin "1921"^^xsd:gYear ;
+  edm:end "1922"^^xsd:gYear .
+
+
+# ====================================================================
+# 3. WEB RESOURCE (immagine)
+# ====================================================================
+# NOTA: come nel file EDM del vaso, lido:linkResource è un percorso
+# locale, non un URL pubblico risolvibile.
+
+<image> a edm:WebResource ;
+  dc:format "image/jpeg" ;
+  dc:identifier "assets/images/progetto_vaso_libellula.jpg" ;
+  dc:type <http://vocab.getty.edu/aat/300215302> .  # digital photograph
+
+
+# ====================================================================
+# 4. ORE AGGREGATION
+# ====================================================================
+
+<aggregation> a ore:Aggregation ;
+  edm:aggregatedCHO <cho> ;
+  edm:isShownBy <image> ;
+  edm:object <image> ;
+  edm:dataProvider "Galleria d'Arte Moderna Carlo Rizzarda"@it ;
+  edm:provider "ICCU - Istituto Centrale per il Catalogo Unico"@it ;
+  edm:rights <http://rightsstatements.org/vocab/InC/1.0/> ;
+  dc:identifier "IT-BL0023" ;
+  edm:isShownAt <https://anagrafe.iccu.sbn.it/it/ricerca/dettaglio.html?codice_isil=it-BL0023/lido-objFVNFD3> .
+
