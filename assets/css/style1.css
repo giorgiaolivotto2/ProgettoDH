@@ -1,5 +1,5 @@
 /* =========================================================
-   D'Annunzio e il Dèco — Stylesheet (palette Tortora e Avorio)
+   D'Annunzio e il Déco — Stylesheet (palette Tortora e Avorio)
    ========================================================= */
 
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap");
@@ -180,6 +180,14 @@ a:hover { color: var(--deco-scuro); }
   font-family: var(--font-body);
   color: rgba(241, 236, 230, 0.75);
   font-size: 0.9rem;
+}
+
+.card a:not(.btn) {
+  color: var(--deco-tortora-light);
+}
+
+.card a:not(.btn):hover {
+  color: var(--deco-accento);
 }
 
 .card hr {
