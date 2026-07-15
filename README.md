@@ -21,10 +21,7 @@ assets/images/   immagini e icona del sito
 data/            metadati delle opere in formato LIDO (XML) e EDM/RDF (Turtle)
 pages/           tutte le pagine del sito
 ```
-
-## Come vederlo
-
-Non serve installare nulla: basta aprire `index.html` con un doppio clic per vederlo nel browser. Tutti i collegamenti tra le pagine funzionano anche così, perché usano percorsi relativi.
+.
 
 ## Tecnologie e standard usati
 
@@ -32,7 +29,3 @@ Non serve installare nulla: basta aprire `index.html` con un doppio clic per ved
 - **Leaflet** per la mappa interattiva dei luoghi
 - **LIDO** (*Lightweight Information Describing Objects*) per la schedatura delle opere
 - **EDM/RDF** (Europeana Data Model) per l'interoperabilità dei metadati con Europeana
-
-## Stato del progetto
-
-Il progetto è in corso. Alcune schede di artisti, tecniche e opere sono ancora segnaposto in attesa di contenuti e immagini definitive.
